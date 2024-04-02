@@ -33,6 +33,7 @@ function App() {
         </p>
         <p>
           Mason Kulikowski
+          Dhir Patel     
         </p>
         <a
           className="App-link"
