@@ -26,32 +26,17 @@ function App() {
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
   }
+  function navigateHome() {
+    window.location.href = '/';
+  }
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <p>
-          Gabriel Simpson<br />
-          Mason Kulikowski<br />
-          Dhir Patel<br />
-          Simeon Sabev<br />   
-        </p>
-        <h1>Career Compass</h1>
+      <h1>Career Compass</h1>
         <p>Empowering Your Professional Journey</p>
         <button className="Home-button" onClick={navigateHome}>
           Home
         </button>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
       <Form>
         <Form.Label>API Key:</Form.Label>
