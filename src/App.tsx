@@ -33,9 +33,6 @@ function App(): JSX.Element {
       ['Climbing the corporate ladder', 'Pursuing further education or training', 'Leading a team or organization', 'Exploring new opportunities and challenges']
     ];
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const handleNextQuestion = () => {
-      setCurrentQuestion(currentQuestion + 1);
-    };
   
     const handleAnswerSelect = () => {
       if (currentQuestion < questions.length - 1) {
