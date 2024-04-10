@@ -13,6 +13,7 @@ if (prevKey !== null) {
 function App() {
   const [key, setKey] = useState<string>(keyData); //for api key input
   const [currentPage, setCurrentPage] = useState<string>("home");
+  const [progress, setProgress] = useState<number>(0);
 
   const goHome = () => {
     setCurrentPage("home");
@@ -58,6 +59,9 @@ function App() {
             <h1>Basic Questions</h1>
 
             <Button className="Back-button" onClick={goHome}>Back to Home</Button>
+            <div style={{backgroundColor: 'green', height: '10%', width: '10%' }}></div>
+            <Button style={{margin: '10px'}} onClick={() => setProgress(progress + 1)}>add proggress</Button>
+            <p>progress</p>
           </div>
         )}
         {currentPage === 'detailed' && (
