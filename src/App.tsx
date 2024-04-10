@@ -74,7 +74,13 @@ function App(): JSX.Element {
             <h1>Career Compass</h1>
             <p style={{position: 'absolute', top: '20%', textAlign: 'center'}}>Empowering Your Professional Journey</p>
             <Button style={{margin: '10px'}} onClick={goBasic}>Basic Questions</Button>
+            <p>Click here for a short career assessment consisting of seven multiple <br />
+               choice questions for more basic results.</p>
             <Button style={{margin: '10px'}} onClick={goDetailed}>Detailed Questions</Button>
+            <p>
+              Click here for a detailed career assessment. This assessment includes <br />
+              open-ended questions to explore your career preferences and future.
+            </p>
           </div>
         )}
         {currentPage === 'basic' && (
