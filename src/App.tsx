@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Button, Form } from 'react-bootstrap';
 
@@ -15,15 +14,12 @@ function App() {
   const [key, setKey] = useState<string>(keyData); //for api key input
   const [currentPage, setCurrentPage] = useState<string>("home");
 
-
   const goHome = () => {
     setCurrentPage("home");
   }
-
   const goBasic = () => {
     setCurrentPage("basic");
   }
-
   const goDetailed = () => {
     setCurrentPage("detailed");
   }
