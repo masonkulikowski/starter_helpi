@@ -13,7 +13,6 @@ if (prevKey !== null) {
 
 function App() {
   const [key, setKey] = useState<string>(keyData); //for api key input
-  const [isHomeVisible, setHomeVisible] = useState<boolean>(false);
   const [currentPage, setCurrentPage] = useState<string>("home");
 
 
