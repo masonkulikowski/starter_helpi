@@ -14,13 +14,19 @@ if (prevKey !== null) {
 function App() {
   const [key, setKey] = useState<string>(keyData); //for api key input
   const [isHomeVisible, setHomeVisible] = useState<boolean>(false);
+  const [currentPage, setCurrentPage] = useState<string>("home");
 
-  const goToHome = () => {
-    setHomeVisible(true);
+
+  const goHome = () => {
+    setCurrentPage("home");
   }
 
-  const goBack = () => {
-    setHomeVisible(false);
+  const goBasic = () => {
+    setCurrentPage("basic");
+  }
+
+  const goDetailed = () => {
+    setCurrentPage("detailed");
   }
 
   //sets the local storage item to the api key the user inputed
@@ -41,21 +47,29 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {isHomeVisible ?
+
+      {currentPage === 'home' && (
           <div>
-            <Button className="Back-button" onClick={goBack}>Home</Button>
-            {isHomeVisible}
-          </div> : null
-        }
-      {!isHomeVisible && (
-          <div>
-            <Button onClick={goToHome}>Basic Questions</Button>
+            <h1>Career Compass</h1>
+              <p>Empowering Your Professional Journey</p>
+            <Button onClick={goBasic}>Basic Questions</Button>
+            <Button onClick={goDetailed}>Detailed Questions</Button>
           </div>
-        )
-      }
-      
-      <h1>Career Compass</h1>
-        <p>Empowering Your Professional Journey</p>
+        )}
+        {currentPage === 'basic' && (
+          <div>
+            <h1>Basic Questions Page</h1>
+
+            <Button className="Back-button" onClick={goHome}>Back to Home</Button>
+          </div>
+        )}
+        {currentPage === 'detailed' && (
+          <div>
+            <h1>Detailed Questions Page</h1>
+            <Button className="Back-button" onClick={goHome}>Back to Home</Button>
+          </div>
+        )}
+
       </header>
       <Form>
         <Form.Label>API Key:</Form.Label>
