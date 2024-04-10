@@ -52,8 +52,8 @@ function App() {
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
             <h1>Career Compass</h1>
             <p style={{position: 'absolute', top: '20%', textAlign: 'center'}}>Empowering Your Professional Journey</p>
-            <Button onClick={goBasic}>Basic Questions</Button>
-            <Button onClick={goDetailed}>Detailed Questions</Button>
+            <Button style={{margin: '10px'}} onClick={goBasic}>Basic Questions</Button>
+            <Button style={{margin: '10px'}} onClick={goDetailed}>Detailed Questions</Button>
           </div>
         )}
         {currentPage === 'basic' && (
