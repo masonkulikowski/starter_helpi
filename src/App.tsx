@@ -49,23 +49,23 @@ function App() {
       <header className="App-header">
 
       {currentPage === 'home' && (
-          <div>
+          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
             <h1>Career Compass</h1>
-              <p>Empowering Your Professional Journey</p>
+            <p style={{position: 'absolute', top: '20%', textAlign: 'center'}}>Empowering Your Professional Journey</p>
             <Button onClick={goBasic}>Basic Questions</Button>
             <Button onClick={goDetailed}>Detailed Questions</Button>
           </div>
         )}
         {currentPage === 'basic' && (
-          <div>
-            <h1>Basic Questions Page</h1>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <h1>Basic Questions</h1>
 
             <Button className="Back-button" onClick={goHome}>Back to Home</Button>
           </div>
         )}
         {currentPage === 'detailed' && (
-          <div>
-            <h1>Detailed Questions Page</h1>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <h1>Detailed Questions</h1>
             <Button className="Back-button" onClick={goHome}>Back to Home</Button>
           </div>
         )}
