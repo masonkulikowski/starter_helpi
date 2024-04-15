@@ -52,6 +52,19 @@
   top: 5%;
   left: 5%;
 }
+.Basic-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #d5bb26; /* Blue background */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Shadow */
+  transition: background-color 0.3s, transform 0.3s;
+}
 
 h1{
   position: absolute;
