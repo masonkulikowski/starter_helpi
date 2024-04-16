@@ -67,17 +67,22 @@ function App(): JSX.Element {
       <header className="App-header">
 
       {currentPage === 'home' && (
-          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '5%' }}>
             <h1>Career Compass</h1>
             <p style={{position: 'absolute', top: '20%', textAlign: 'center'}}>Empowering Your Professional Journey</p>
-            <Button style={{margin: '10px'}} onClick={goBasic}>Basic Questions</Button>
-            <p>Click here for a short career assessment consisting of seven multiple <br />
-               choice questions for more basic results.</p>
-            <Button style={{margin: '10px'}} onClick={goDetailed}>Detailed Questions</Button>
-            <p>
-              Click here for a detailed career assessment. This assessment includes <br />
-              open-ended questions to explore your career preferences and future.
-            </p>
+            <div style={{marginTop: '50px'}}>
+              <Button className="Question-button" onClick={goBasic}>Basic Questions</Button>
+              <p>Click here for a short career assessment consisting of seven multiple <br />
+                choice questions for more basic results.
+              </p>
+            </div>
+            <div style={{marginTop: '50px'}}>
+              <Button className="Question-button" onClick={goDetailed}>Detailed Questions</Button>
+              <p>
+                Click here for a detailed career assessment. This assessment includes <br />
+                open-ended questions to explore your career preferences and future.
+              </p>
+            </div>
           </div>
         )}
         {currentPage === 'basic' && (
