@@ -32,13 +32,16 @@ function App(): JSX.Element {
       ['Persevere and find solutions', 'Seek support and advice from others', 'Reflect and learn from the experience', 'Stay positive and maintain perspective'],
       ['Climbing the corporate ladder', 'Pursuing further education or training', 'Leading a team or organization', 'Exploring new opportunities and challenges']
     ];
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  
-    const handleAnswerSelect = () => {
+    const [user_answers, setUserAnswers] = useState(Array.from({ length: questions.length }, () => ''));
+    const [currentQuestion, setCurrentQuestion] = useState(0);
+    const handleAnswerSelect = (answer: string) => {
+    const updatedAnswers = [...user_answers];
+    updatedAnswers[currentQuestion] = answer; // Update the selected answer for the current question
+    setUserAnswers(updatedAnswers); // Update the user_answers array
       if (currentQuestion < questions.length - 1) {
         setCurrentQuestion(currentQuestion + 1);
       } else {
-        // Handle end of questions
+        goDetailed();
       }
     };
   const goHome = () => {
@@ -73,7 +76,7 @@ function App(): JSX.Element {
             <Button style={{margin: '10px'}} onClick={goBasic}>Basic Questions</Button>
             <p>Click here for a short career assessment consisting of seven multiple <br />
                choice questions for more basic results.</p>
-            <Button style={{margin: '10px'}} onClick={goDetailed}>Detailed Questions</Button>
+            <Button style={{margin: '10px',}} onClick={goDetailed}>Detailed Questions</Button>
             <p>
               Click here for a detailed career assessment. This assessment includes <br />
               open-ended questions to explore your career preferences and future.
@@ -89,14 +92,15 @@ function App(): JSX.Element {
     <ol type="A" style={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', justifyContent: 'flex-end', width: '80%' }}>
       {answers[currentQuestion].map((answer, index) => (
         <div key={index} style={{ marginBottom: '10px', flex: 1 }}>
-          <button className="button" onClick={handleAnswerSelect} style={{ width: '100%', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '10px', fontSize: '16px', fontWeight: 'bold', border: 'none', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>{String.fromCharCode(65 + index)}. {answer}</button>
-        </div>
-      ))}
+        <button className="Basic-button" onClick={() => handleAnswerSelect(answer)} style={{ width: '100%', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '10px', fontSize: '16px', fontWeight: 'bold', border: 'none', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>{String.fromCharCode(65 + index)}. {answer}</button>
+      </div>
+    ))}
     </ol>
     {currentQuestion < questions.length && (
       <Button className="Back-button" onClick={goHome} style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#dc3545', color: '#fff', borderRadius: '5px', border: 'none', fontSize: '16px', fontWeight: 'bold', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>Back to Home</Button>
     )}
   </div>
+  
 )}
         {currentPage === 'detailed' && (
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
