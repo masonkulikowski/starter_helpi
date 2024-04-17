@@ -33,7 +33,6 @@ function App(): JSX.Element {
       ['Climbing the corporate ladder', 'Pursuing further education or training', 'Leading a team or organization', 'Exploring new opportunities and challenges']
     ];
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  //const [user_answers, setUserAnswers] = useState(Array.from({ length: questions.length }, () => ''));
 
   //States for all detailed questions responses
   const [responses, setResponses] = useState({
@@ -206,7 +205,6 @@ function App(): JSX.Element {
             <h1>Result Page </h1>
             <p style={{position: 'absolute', top: '20%', textAlign: 'center'}}>Your result will be shown here:</p>
             <Button className="Back-button" onClick={goHome} style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#dc3545', color: '#fff', borderRadius: '5px', border: 'none', fontSize: '16px', fontWeight: 'bold', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>Back to Home</Button>
-            
           </div>
         )}
 
