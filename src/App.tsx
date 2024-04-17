@@ -38,6 +38,7 @@ function App() {
 
   return (
     <div className="App">
+
       <header className="App-header">
 
       {currentPage === 'home' && (
@@ -55,14 +56,36 @@ function App() {
           </div>
         )}
         {currentPage === 'basic' && (
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <><div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+
             <h1>Basic Questions</h1>
 
             <Button className="Back-button" onClick={goHome}>Back to Home</Button>
-            <div style={{backgroundColor: 'green', height: '10%', width: '10%' }}></div>
-            <Button style={{margin: '10px'}} onClick={() => setProgress(progress + 1)}>add proggress</Button>
-            <p>progress</p>
-          </div>
+            <div>
+              <Button style={{ margin: '10px' }} onClick={() => setProgress(progress === 7 ? progress : progress + 1)}>add progress</Button><br />
+              <Button style={{ margin: '10px' }} onClick={() => setProgress(0)}>reset</Button><br />
+            </div>
+          </div><div>
+              <p>Progress</p>
+              <div style={{
+                backgroundColor: 'green',
+                height: '20px',
+                width: String(progress) + '00px',
+                display: "inline-block",
+                verticalAlign: "top",
+                marginLeft: "0%"
+              }}>
+              </div>
+              <div style={{
+                backgroundColor: 'gray',
+                height: '20px',
+                width: String(7 - progress) + '00px',
+                display: "inline-block",
+                verticalAlign: "top",
+                marginLeft: "0%"
+              }}>
+              </div>
+            </div></>
         )}
         {currentPage === 'detailed' && (
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
