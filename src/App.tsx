@@ -8,7 +8,7 @@ let keyData = "";
 const saveKeyData = "MYKEY";
 const prevKey = localStorage.getItem(saveKeyData); //so it'll look like: MYKEY: <api_key_value here> in the local storage when you inspect
 if (prevKey !== null) {
-  keyData = JSON.parse(prevKey);
+ keyData = JSON.parse(prevKey);
 }
 
 function App(): JSX.Element {
@@ -32,12 +32,21 @@ function App(): JSX.Element {
       ['Persevere and find solutions', 'Seek support and advice from others', 'Reflect and learn from the experience', 'Stay positive and maintain perspective'],
       ['Climbing the corporate ladder', 'Pursuing further education or training', 'Leading a team or organization', 'Exploring new opportunities and challenges']
     ];
-    const [user_answers, setUserAnswers] = useState(Array.from({ length: questions.length }, () => ''));
-    const [currentQuestion, setCurrentQuestion] = useState(0);
-    const handleAnswerSelect = (answer: string) => {
-    const updatedAnswers = [...user_answers];
-    updatedAnswers[currentQuestion] = answer; // Update the selected answer for the current question
-    setUserAnswers(updatedAnswers); // Update the user_answers array
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  //const [user_answers, setUserAnswers] = useState(Array.from({ length: questions.length }, () => ''));
+
+  //States for all detailed questions responses
+  const [responses, setResponses] = useState({
+    question1: '',
+    question2: '',
+    question3: '',
+    question4: '',
+    question5: '',
+    question6: '',
+    question7: '',
+  });
+
+    const handleAnswerSelect = () => {
       if (currentQuestion < questions.length - 1) {
         setCurrentQuestion(currentQuestion + 1);
       } else {
@@ -53,17 +62,36 @@ function App(): JSX.Element {
   const goDetailed = () => {
     setCurrentPage("detailed");
   }
-
+  const goResult = () => {
+    setCurrentPage("result");
+  }
   //sets the local storage item to the api key the user inputed
   function handleSubmit() {
     localStorage.setItem(saveKeyData, JSON.stringify(key));
-    window.location.reload(); //when making a mistake and changing the key again, I found that I have to reload the whole site before openai refreshes what it has stores for the local storage variable
+    window.location.reload();//when making a mistake and changing the key again, I found that I have to reload the whole site before openai refreshes what it has stores for the local storage variable
   }
 
   //whenever there's a change it'll store the api key in a local state called key but it won't be set in the local storage until the user clicks the submit button
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
   }
+
+   //handles changes to detailed questions and updates the state
+   const handleChange = (e: { target: { name: any; value: any; }; }) => {
+    const { name, value } = e.target;
+    setResponses(prevResponses => ({
+      ...prevResponses,
+      [name]: value,
+    }));
+  };
+
+ //detailed responses get saved to console
+  const submitAssessment = (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+    console.log('User Responses: ', responses);
+
+  };
+
 
   return (
     <div className="App">
@@ -76,7 +104,7 @@ function App(): JSX.Element {
             <Button style={{margin: '10px'}} onClick={goBasic}>Basic Questions</Button>
             <p>Click here for a short career assessment consisting of seven multiple <br />
                choice questions for more basic results.</p>
-            <Button style={{margin: '10px',}} onClick={goDetailed}>Detailed Questions</Button>
+            <Button style={{margin: '10px'}} onClick={goDetailed}>Detailed Questions</Button>
             <p>
               Click here for a detailed career assessment. This assessment includes <br />
               open-ended questions to explore your career preferences and future.
@@ -92,20 +120,93 @@ function App(): JSX.Element {
     <ol type="A" style={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', justifyContent: 'flex-end', width: '80%' }}>
       {answers[currentQuestion].map((answer, index) => (
         <div key={index} style={{ marginBottom: '10px', flex: 1 }}>
-        <button className="Basic-button" onClick={() => handleAnswerSelect(answer)} style={{ width: '100%', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '10px', fontSize: '16px', fontWeight: 'bold', border: 'none', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>{String.fromCharCode(65 + index)}. {answer}</button>
-      </div>
-    ))}
+          <button className="button" onClick={handleAnswerSelect} style={{ width: '100%', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '10px', fontSize: '16px', fontWeight: 'bold', border: 'none', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>{String.fromCharCode(65 + index)}. {answer}</button>
+        </div>
+      ))}
     </ol>
     {currentQuestion < questions.length && (
       <Button className="Back-button" onClick={goHome} style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#dc3545', color: '#fff', borderRadius: '5px', border: 'none', fontSize: '16px', fontWeight: 'bold', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>Back to Home</Button>
     )}
   </div>
-  
 )}
         {currentPage === 'detailed' && (
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <h1>Detailed Questions</h1>
             <Button className="Back-button" onClick={goHome}>Back to Home</Button>
+            <form onSubmit={submitAssessment}>
+              <div>
+                <label>1.What careers seem interesting to you? Why?</label>
+                   <textarea
+                    id="question1"
+                    name="question1"
+                    value={responses.question1}
+                    onChange={handleChange}
+                  />
+              </div>
+              <div>
+                <label>2.What are your current skills?(Hard Skills and Soft Skills)</label>
+                   <textarea
+                    id="question2"
+                    name="question2"
+                    value={responses.question2}
+                   onChange={handleChange}
+                  />
+             </div>
+             <div>
+               <label>3.What is your highest level of education or training?</label>
+                 <textarea
+                   id="question3"
+                   name="question3"
+                   value={responses.question3}
+                   onChange={handleChange}
+                 />
+              </div>
+              <div>
+               <label>4.What is your ideal Work-life balance?</label>
+                 <textarea
+                   id="question4"
+                   name="question4"
+                   value={responses.question4}
+                   onChange={handleChange}
+                 />
+              </div>
+              <div>
+               <label>5.What are you willing to give up for better career opportunities?</label>
+                 <textarea
+                   id="question5"
+                   name="question5"
+                   value={responses.question5}
+                   onChange={handleChange}
+                 />
+              </div>
+              <div>
+               <label>6.How important is money?</label>
+                 <textarea
+                   id="question6"
+                   name="question6"
+                   value={responses.question6}
+                   onChange={handleChange}
+                 />
+              </div>
+              <div>
+               <label>7.What impact do you want to make on the world?</label>
+                 <textarea
+                   id="question7"
+                   name="question7"
+                   value={responses.question7}
+                   onChange={handleChange}
+                 />
+              </div>
+              <button type="submit" onClick={goResult}>Submit</button>
+            </form>
+          </div>
+        )}
+        {currentPage === 'result' && (
+          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+            <h1>Result Page </h1>
+            <p style={{position: 'absolute', top: '20%', textAlign: 'center'}}>Your result will be shown here:</p>
+            <Button className="Back-button" onClick={goHome} style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#dc3545', color: '#fff', borderRadius: '5px', border: 'none', fontSize: '16px', fontWeight: 'bold', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>Back to Home</Button>
+            
           </div>
         )}
 
@@ -119,4 +220,5 @@ function App(): JSX.Element {
     </div>
   )
   }
+
 export default App;
