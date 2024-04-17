@@ -68,7 +68,7 @@ function App() {
             <div className='progress'>
               <p>Progress</p>
               <div style={{
-                backgroundColor: 'green',
+                backgroundColor: 'light green',
                 height: '10px',
                 width: String(progress) + '00px',
                 display: "inline-block",
