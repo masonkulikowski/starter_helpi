@@ -56,20 +56,20 @@ function App() {
           </div>
         )}
         {currentPage === 'basic' && (
-          <><div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
 
             <h1>Basic Questions</h1>
 
             <Button className="Back-button" onClick={goHome}>Back to Home</Button>
             <div>
-              <Button style={{ margin: '10px' }} onClick={() => setProgress(progress === 7 ? progress : progress + 1)}>add progress</Button><br />
-              <Button style={{ margin: '10px' }} onClick={() => setProgress(0)}>reset</Button><br />
+              <Button style={{margin: '10px'}} onClick={() => setProgress(progress === 7 ? progress : progress + 1)}>add proggress</Button><br/>
+              <Button style={{margin: '10px'}} onClick={() => setProgress(0)}>reset</Button><br />
             </div>
-          </div><div>
+            <div className='progress'>
               <p>Progress</p>
               <div style={{
                 backgroundColor: 'green',
-                height: '20px',
+                height: '10px',
                 width: String(progress) + '00px',
                 display: "inline-block",
                 verticalAlign: "top",
@@ -78,14 +78,16 @@ function App() {
               </div>
               <div style={{
                 backgroundColor: 'gray',
-                height: '20px',
+                height: '10px',
                 width: String(7 - progress) + '00px',
                 display: "inline-block",
                 verticalAlign: "top",
                 marginLeft: "0%"
               }}>
               </div>
-            </div></>
+            </div>
+          </div>
+          
         )}
         {currentPage === 'detailed' && (
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
