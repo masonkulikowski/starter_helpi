@@ -1,0 +1,35 @@
+nav {
+	background-color: #8692aa;
+	display: flex;
+	justify-content: space-between;
+
+}
+nav h1 {
+	line-height: 0;
+	font-weight: 775;
+	font-size: 50px;
+	margin: 1;
+	margin-top: -20px;
+	margin-left: 10px;
+	color: #2a2a46;
+}
+
+nav ul {
+	display: inline-flex;
+	list-style-type: none;
+}
+
+nav ul a {
+	text-decoration: none;
+}
+
+nav ul li {
+	margin: 15px;
+	font-size: 30px;
+	font-weight: 700;
+}
+
+nav ul li:hover {
+	color: #b5b2e4;
+	transition: 0.3s ease;
+}
