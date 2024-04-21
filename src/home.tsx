@@ -1,7 +1,28 @@
-import React, { useState } from 'react';
+
+import { Button } from 'react-bootstrap';
 import './App.css';
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
+interface NavigationButtonProps {
+    destination: string;
+    label: string;
+  }
+  
+  const NavigationButton: React.FC<NavigationButtonProps> = ({ destination, label }) => {
+    const navigate = useNavigate();
+  
+    const handleClick = () => {
+      navigate(destination);
+    };
+  
+    return (
+      <Button onClick={handleClick}>
+        {label}
+      </Button>
+    );
+  }
+  
 function Home(){
 return(
     <div className="App">
@@ -13,26 +34,15 @@ return(
                 <p>Click here for a short career assessment consisting of seven multiple <br />
                     choice questions for more basic results.
                 </p>
-                    <ul>
-                        <Link to="/basic">
-                            <li>BASIC QUESTIONS</li>
-                        </Link>
-                    </ul>
+                <NavigationButton destination="/basic" label="Basic Question" />
                 <p>
                     Click here for a detailed career assessment. This assessment includes <br />
                     open-ended questions to explore your career preferences and future.
                 </p>
-                     <ul>
-                        <Link to="/detailed">
-                            <li>Detailed QUESTIONS</li>
-                        </Link>
-                    </ul>
+                <NavigationButton destination="/detailed" label="Deailed Question" />
             </div>
         </header>
     </div>
-);            //<Button style={{margin: '10px'}} onClick={goBasic}>Basic Questions</Button>
-// <Button style={{margin: '10px'}} onClick={goDetailed}>Detailed Questions</Button>
-
-
+);
 }
 export default Home;

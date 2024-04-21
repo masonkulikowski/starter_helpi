@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Button, Form } from 'react-bootstrap';
 
 function Detailed_Question(){
     //States for all detailed questions responses
