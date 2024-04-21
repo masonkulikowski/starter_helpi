@@ -1,9 +1,9 @@
 nav {
-	background-color: #8692aa;
+	background-color: #ACE4FA;
 	display: flex;
 	justify-content: space-between;
-
 }
+
 nav h1 {
 	line-height: 0;
 	font-weight: 775;
@@ -21,6 +21,7 @@ nav ul {
 
 nav ul a {
 	text-decoration: none;
+	color: #366358;
 }
 
 nav ul li {

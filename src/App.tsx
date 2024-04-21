@@ -15,6 +15,7 @@ function App(): JSX.Element {
       <div className='App'>
         <TopH />
         <Routes>
+        <Route index element={<Home />} />
            <Route path="/home" Component={Home} />
            <Route path="/basic" Component={Basic_Question} />
            <Route path="/detailed" Component={Detailed_Question} />

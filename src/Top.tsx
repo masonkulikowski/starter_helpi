@@ -11,10 +11,10 @@ function TopH(){
                 </Link>
                 <ul>
                 <Link to="/basic">
-						<li>basic question</li>
+						<li>Basic Question</li>
 					</Link>
 					<Link to="/detailed">
-						<li>detailed question</li>
+						<li>Detailed Question</li>
 					</Link>
                 </ul>
             </nav>
