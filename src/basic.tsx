@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
+import { Link } from "react-router-dom";
+
 
 function Basic_Question(){
     const questions = [
@@ -23,12 +25,11 @@ function Basic_Question(){
     const [currentQuestion, setCurrentQuestion] = useState(0);
 
     const handleAnswerSelect = () => {
-        if (currentQuestion < questions.length - 1) {
-          setCurrentQuestion(currentQuestion + 1);
-        } else {
-          // Handle end of questions
-        }
-      };
+      if (currentQuestion < questions.length - 1) {
+        setCurrentQuestion(currentQuestion + 1);
+      } 
+    };
+      
 
       return (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px', backgroundColor: '#f5f5f5', borderRadius: '10px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
@@ -43,9 +44,15 @@ function Basic_Question(){
             </div>
           ))}
         </ol>
-        {currentQuestion < questions.length}
+        {currentQuestion === questions.length - 1 && (
+                <Link to="/detailed" className="button" style={{ marginTop: '20px', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '10px', fontSize: '16px', fontWeight: 'bold', textDecoration: 'none' }}>Go to Detailed Page</Link>
+            )}
       </div>
       );
 }
 
 export default Basic_Question;
+
+//things I removed: && (
+//          <Button className="Back-button" onClick={goHome} style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#dc3545', color: '#fff', borderRadius: '5px', border: 'none', fontSize: '16px', fontWeight: 'bold', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>Back to Home</Button>
+//        )

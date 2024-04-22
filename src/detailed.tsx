@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import { Link } from 'react-router-dom';
 
 interface Responses {
     question1: string;
@@ -80,7 +81,7 @@ function DetailedQuestion() {
                                 <button type="button" onClick={() => handleNavigation('next')} style={{ marginLeft: 8 }}>Next</button>
                             )}
                             {currentQuestionIndex === questions.length - 1 && (
-                                <button type="submit">Submit</button>
+                                <Link to="/Home" className="Submit-Button">Submit</Link>
                             )}
                         </div>
                     </form>
