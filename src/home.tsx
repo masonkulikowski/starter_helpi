@@ -2,8 +2,7 @@
 import { Button } from 'react-bootstrap';
 import './App.css';
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
-
+//Creates a button function 
 interface NavigationButtonProps {
     destination: string;
     label: string;
