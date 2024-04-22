@@ -81,7 +81,7 @@ function DetailedQuestion() {
                                 <button type="button" onClick={() => handleNavigation('next')} style={{ marginLeft: 8 }}>Next</button>
                             )}
                             {currentQuestionIndex === questions.length - 1 && (
-                                <Link to="/Home" className="Submit-Button">Submit</Link>
+                                <Link to="/result" className="Submit-Button">Submit</Link>
                             )}
                         </div>
                     </form>
