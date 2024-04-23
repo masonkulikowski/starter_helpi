@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (43 ms)
+  ✕ renders learn react link (52 ms)
 
   ● renders learn react link
 
@@ -15,67 +15,98 @@ FAIL src/App.test.tsx
         [36m<div[39m
           [33mclass[39m=[32m"App"[39m
         [36m>[39m
-          [36m<header[39m
-            [33mclass[39m=[32m"App-header"[39m
-          [36m>[39m
-            [36m<div[39m
-              [33mstyle[39m=[32m"display: flex; flex-direction: column; justify-content: center; align-items: center;"[39m
+          [36m<nav>[39m
+            [36m<a[39m
+              [33mhref[39m=[32m"/home"[39m
             [36m>[39m
               [36m<h1>[39m
-                [0mCareer Compass[0m
+                [0mCarrer Compass[0m
               [36m</h1>[39m
-              [36m<p[39m
-                [33mstyle[39m=[32m"position: absolute; top: 20%; text-align: center;"[39m
+            [36m</a>[39m
+            [36m<ul>[39m
+              [36m<a[39m
+                [33mhref[39m=[32m"/basic"[39m
               [36m>[39m
-                [0mEmpowering Your Professional Journey[0m
-              [36m</p>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"btn btn-primary"[39m
-                [33mstyle[39m=[32m"margin: 10px;"[39m
-                [33mtype[39m=[32m"button"[39m
+                [36m<li>[39m
+                  [0mBasic Question[0m
+                [36m</li>[39m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mhref[39m=[32m"/detailed"[39m
               [36m>[39m
-                [0mBasic Questions[0m
-              [36m</button>[39m
-              [36m<p>[39m
-                [0mClick here for a short career assessment consisting of seven multiple [0m
-                [36m<br />[39m
-                [0mchoice questions for more basic results.[0m
-              [36m</p>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"btn btn-primary"[39m
-                [33mstyle[39m=[32m"margin: 10px;"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mDetailed Questions[0m
-              [36m</button>[39m
-              [36m<p>[39m
-                [0mClick here for a detailed career assessment. This assessment includes [0m
-                [36m<br />[39m
-                [0mopen-ended questions to explore your career preferences and future.[0m
-              [36m</p>[39m
-            [36m</div>[39m
-          [36m</header>[39m
-          [36m<form[39m
-            [33mclass[39m=[32m""[39m
+                [36m<li>[39m
+                  [0mDetailed Question[0m
+                [36m</li>[39m
+              [36m</a>[39m
+            [36m</ul>[39m
+          [36m</nav>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"App"[39m
           [36m>[39m
-            [36m<label[39m
-              [33mclass[39m=[32m"form-label"[39m
+            [36m<header[39m
+              [33mclass[39m=[32m"App-header"[39m
             [36m>[39m
-              [0mAPI Key:[0m
-            [36m</label>[39m
-            [36m<input[39m
-              [33mclass[39m=[32m"form-control"[39m
-              [33mplaceholder[39m=[32m"Insert API Key Here"[39m
-              [33mtype[39m=[32m"password"[39m
-            [36m/>[39m
-            [36m<br />[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"Submit-Button btn btn-primary"[39m
-              [33mtype[39m=[32m"button"[39m
+              [36m<div[39m
+                [33mstyle[39m=[32m"display: flex; flex-direction: column; justify-content: center; align-items: center;"[39m
+              [36m>[39m
+                [36m<h1>[39m
+                  [0mCareer Compass[0m
+                [36m</h1>[39m
+                [36m<p[39m
+                  [33mstyle[39m=[32m"position: absolute; top: 20%; text-align: center;"[39m
+                [36m>[39m
+                  [0mEmpowering Your Professional Journey[0m
+                [36m</p>[39m
+                [36m<p>[39m
+                  [0mClick here for a short career assessment consisting of seven multiple [0m
+                  [36m<br />[39m
+                  [0mchoice questions for more basic results.[0m
+                [36m</p>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"btn btn-primary"[39m
+                  [33mtype[39m=[32m"button"[39m
+                [36m>[39m
+                  [0mBasic Question[0m
+                [36m</button>[39m
+                [36m<p>[39m
+                  [0mClick here for a detailed career assessment. This assessment includes [0m
+                  [36m<br />[39m
+                  [0mopen-ended questions to explore your career preferences and future.[0m
+                [36m</p>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"btn btn-primary"[39m
+                  [33mtype[39m=[32m"button"[39m
+                [36m>[39m
+                  [0mDeailed Question[0m
+                [36m</button>[39m
+              [36m</div>[39m
+            [36m</header>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"App"[39m
+          [36m>[39m
+            [36m<form[39m
+              [33mclass[39m=[32m""[39m
             [36m>[39m
-              [0mSubmit[0m
-            [36m</button>[39m
-          [36m</form>[39m
+              [36m<label[39m
+                [33mclass[39m=[32m"form-label"[39m
+              [36m>[39m
+                [0mAPI Key:[0m
+              [36m</label>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"form-control"[39m
+                [33mplaceholder[39m=[32m"Insert API Key Here"[39m
+                [33mtype[39m=[32m"password"[39m
+              [36m/>[39m
+              [36m<br />[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"Submit-Button btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mSubmit[0m
+              [36m</button>[39m
+            [36m</form>[39m
+          [36m</div>[39m
         [36m</div>[39m
       [36m</div>[39m
     [36m</body>[39m
@@ -98,18 +129,24 @@ FAIL src/App.test.tsx
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
---------------------|---------|----------|---------|---------|-----------------------------------------
-File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                       
---------------------|---------|----------|---------|---------|-----------------------------------------
-All files           |   39.13 |    33.33 |    7.14 |      40 |                                         
- App.tsx            |   51.42 |    42.85 |    8.33 |   52.94 | 11,49-52,56,59,62,65-75,80-81,89-90,121 
- index.tsx          |       0 |      100 |     100 |       0 | 7-19                                    
- reportWebVitals.ts |       0 |        0 |       0 |       0 | 3-10                                    
---------------------|---------|----------|---------|---------|-----------------------------------------
+--------------------|---------|----------|---------|---------|-------------------
+File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------|---------|----------|---------|---------|-------------------
+All files           |   23.63 |     5.55 |   22.72 |   24.07 |                   
+ App.tsx            |     100 |      100 |     100 |     100 |                   
+ GPT.tsx            |      60 |       50 |   33.33 |      60 | 11,18-24          
+ Top.tsx            |     100 |      100 |     100 |     100 |                   
+ basic.tsx          |       0 |        0 |       0 |       0 | 7-42              
+ detailed.tsx       |       0 |        0 |       0 |       0 | 18-81             
+ home.tsx           |   83.33 |      100 |   66.66 |   83.33 | 15                
+ index.tsx          |       0 |      100 |     100 |       0 | 7-19              
+ reportWebVitals.ts |       0 |        0 |       0 |       0 | 3-10              
+ result.tsx         |       0 |      100 |       0 |       0 | 5                 
+--------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.68 s
+Time:        2.968 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
