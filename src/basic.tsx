@@ -23,6 +23,7 @@ function Basic_Question(){
         ['Climbing the corporate ladder', 'Pursuing further education or training', 'Leading a team or organization', 'Exploring new opportunities and challenges']
       ];
     const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [progress, setProgress] = useState<number>(0);
     const [allQuestionsAnswered, setAllQuestionsAnswered] = useState(false);
 
     const handleAnswerSelect = () => {
@@ -30,6 +31,7 @@ function Basic_Question(){
         setAllQuestionsAnswered(true);
       } else {
         setCurrentQuestion(currentQuestion + 1);
+        setProgress(progress + 1);
       }
     };
       
@@ -49,13 +51,35 @@ function Basic_Question(){
                 </div>
               ))}
             </ol>
+            <div className='progress'>
+              
+              <p style={{ color: '#666', fontSize: '18px', fontWeight: 'bold' }}>Progress</p>
+              <div style={{
+                backgroundColor: '#18c002',
+                height: '10px',
+                width: String(progress * 150) + 'px',
+                display: "inline-block",
+                verticalAlign: "top",
+                marginLeft: "0%"
+                }}>
+              </div>
+              <div style={{
+                backgroundColor: '#fff',
+                height: '10px',
+                width: String((7 - progress) * 150) + 'px',
+                display: "inline-block",
+                verticalAlign: "top",
+                marginLeft: "0%"
+                }}>
+              </div>
+            </div>
           </>
           ) : (
             <Link to="/result" className="button" style={{ marginTop: '20px', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '10px', fontSize: '16px', fontWeight: 'bold', textDecoration: 'none' }}>See Results</Link>
           )}
       </div>
       );
-}
+    }
 
 export default Basic_Question;
 
