@@ -23,31 +23,57 @@ function Basic_Question(){
         ['Climbing the corporate ladder', 'Pursuing further education or training', 'Leading a team or organization', 'Exploring new opportunities and challenges']
       ];
     const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [progress, setProgress] = useState<number>(0);
 
     const handleAnswerSelect = () => {
       if (currentQuestion < questions.length - 1) {
         setCurrentQuestion(currentQuestion + 1);
+        setProgress(progress + 1);
       } 
     };
       
 
       return (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px', backgroundColor: '#f5f5f5', borderRadius: '10px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
-        <h1 style={{ marginBottom: '20px', color: '#fff', fontSize: '36px', fontWeight: 'bold' }}>Basic Questions</h1>
-        <div style={{ marginBottom: '20px', width: '80%', textAlign: 'center' }}>
-          <h3 style={{ color: '#666', fontSize: '18px' }}>{questions[currentQuestion]}</h3>
-        </div>
-        <ol type="A" style={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', justifyContent: 'flex-end', width: '80%' }}>
-          {answers[currentQuestion].map((answer, index) => (
-            <div key={index} style={{ marginBottom: '10px', flex: 1 }}>
-              <button className="button" onClick={handleAnswerSelect} style={{ width: '100%', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '10px', fontSize: '16px', fontWeight: 'bold', border: 'none', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>{String.fromCharCode(65 + index)}. {answer}</button>
+          <h1 style={{ marginBottom: '20px', color: '#fff', fontSize: '36px', fontWeight: 'bold' }}>Basic Questions</h1>
+            <div style={{ marginBottom: '20px', width: '80%', textAlign: 'center' }}>
+              <h3 style={{ color: '#666', fontSize: '18px' }}>{questions[currentQuestion]}</h3>
             </div>
-          ))}
-        </ol>
-        {currentQuestion === questions.length - 1 && (
+            <ol type="A" style={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', justifyContent: 'flex-end', width: '80%' }}>
+              {answers[currentQuestion].map((answer, index) => (
+                <div key={index} style={{ marginBottom: '10px', flex: 1 }}>
+                  <button className="button" onClick={handleAnswerSelect} style={{ width: '100%', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '10px', fontSize: '16px', fontWeight: 'bold', border: 'none', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>{String.fromCharCode(65 + index)}. {answer}</button>
+                </div>
+                
+              ))}
+              <div className='progress'>
+              
+              <p style={{ color: '#666', fontSize: '18px', fontWeight: 'bold' }}>Progress</p>
+              <div style={{
+                backgroundColor: '#18c002',
+                height: '10px',
+                width: String(progress * 150) + 'px',
+                display: "inline-block",
+                verticalAlign: "top",
+                marginLeft: "0%"
+                }}>
+              </div>
+              <div style={{
+                backgroundColor: '#fff',
+                height: '10px',
+                width: String((7 - progress) * 150) + 'px',
+                display: "inline-block",
+                verticalAlign: "top",
+                marginLeft: "0%"
+                }}>
+              </div>
+            </div>
+            </ol>
+              {currentQuestion === questions.length - 1 && (
                 <Link to="/detailed" className="button" style={{ marginTop: '20px', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '10px', fontSize: '16px', fontWeight: 'bold', textDecoration: 'none' }}>Go to Detailed Page</Link>
-            )}
-      </div>
+              )}
+              
+        </div>
       );
 }
 
