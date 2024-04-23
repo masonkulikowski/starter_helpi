@@ -78,3 +78,8 @@ h1{
   height: 50px;
   padding-top: 100px;
   }
+
+  progress{
+    max-width: 100%;
+    /*background-color: #18c002;*/
+  }

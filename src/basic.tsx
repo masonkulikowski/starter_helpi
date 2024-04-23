@@ -44,33 +44,35 @@ function Basic_Question(){
                 <div key={index} style={{ marginBottom: '10px', flex: 1 }}>
                   <button className="button" onClick={handleAnswerSelect} style={{ width: '100%', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '10px', fontSize: '16px', fontWeight: 'bold', border: 'none', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>{String.fromCharCode(65 + index)}. {answer}</button>
                 </div>
+                
               ))}
+              <div className='progress'>
+              
+              <p style={{ color: '#666', fontSize: '18px', fontWeight: 'bold' }}>Progress</p>
+              <div style={{
+                backgroundColor: '#18c002',
+                height: '10px',
+                width: String(progress * 150) + 'px',
+                display: "inline-block",
+                verticalAlign: "top",
+                marginLeft: "0%"
+                }}>
+              </div>
+              <div style={{
+                backgroundColor: '#fff',
+                height: '10px',
+                width: String((7 - progress) * 150) + 'px',
+                display: "inline-block",
+                verticalAlign: "top",
+                marginLeft: "0%"
+                }}>
+              </div>
+            </div>
             </ol>
               {currentQuestion === questions.length - 1 && (
                 <Link to="/detailed" className="button" style={{ marginTop: '20px', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '10px', fontSize: '16px', fontWeight: 'bold', textDecoration: 'none' }}>Go to Detailed Page</Link>
               )}
-              <div className='progress'>
               
-                <p style={{ color: '#666', fontSize: '18px', fontWeight: 'bold' }}>Progress</p>
-                <div style={{
-                  backgroundColor: 'green',
-                  height: '10px',
-                  width: String(progress) + '00px',
-                  display: "inline-block",
-                  verticalAlign: "top",
-                  marginLeft: "0%"
-                  }}>
-                </div>
-                <div style={{
-                  backgroundColor: 'gray',
-                  height: '10px',
-                  width: String(7 - progress) + '00px',
-                  display: "inline-block",
-                  verticalAlign: "top",
-                  marginLeft: "0%"
-                  }}>
-                </div>
-              </div>
         </div>
       );
 }
