@@ -49,7 +49,7 @@ function App(): JSX.Element {
       if (currentQuestion < questions.length - 1) {
         setCurrentQuestion(currentQuestion + 1);
       } else {
-        // Handle end of questions
+        goDetailed();
       }
     };
   const goHome = () => {
@@ -61,11 +61,13 @@ function App(): JSX.Element {
   const goDetailed = () => {
     setCurrentPage("detailed");
   }
-
+  const goResult = () => {
+    setCurrentPage("result");
+  }
   //sets the local storage item to the api key the user inputed
   function handleSubmit() {
     localStorage.setItem(saveKeyData, JSON.stringify(key));
-    window.location.reload(); //when making a mistake and changing the key again, I found that I have to reload the whole site before openai refreshes what it has stores for the local storage variable
+    window.location.reload();//when making a mistake and changing the key again, I found that I have to reload the whole site before openai refreshes what it has stores for the local storage variable
   }
 
   //whenever there's a change it'll store the api key in a local state called key but it won't be set in the local storage until the user clicks the submit button
@@ -199,8 +201,15 @@ function App(): JSX.Element {
                    onChange={handleChange}
                  />
               </div>
-              <button type="submit">Submit</button>
+              <button type="submit" onClick={goResult}>Submit</button>
             </form>
+          </div>
+        )}
+        {currentPage === 'result' && (
+          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+            <h1>Result Page </h1>
+            <p style={{position: 'absolute', top: '20%', textAlign: 'center'}}>Your result will be shown here:</p>
+            <Button className="Back-button" onClick={goHome} style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#dc3545', color: '#fff', borderRadius: '5px', border: 'none', fontSize: '16px', fontWeight: 'bold', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>Back to Home</Button>
           </div>
         )}
 
