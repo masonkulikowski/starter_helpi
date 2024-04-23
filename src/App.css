@@ -54,6 +54,8 @@
 }
 .Basic-button {
   display: inline-block;
+  width: 130px;
+  margin-left: 10px;
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
@@ -61,7 +63,25 @@
   text-align: center;
   text-decoration: none;
   border-radius: 5px;
+  border-style:hidden;
   background-color: #d5bb26; /* Blue background */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Shadow */
+  transition: background-color 0.3s, transform 0.3s;
+}
+.Detailed-button {
+  display: inline-block;
+  width: 130px;
+  height: 43px;
+  margin-left: 10px;
+  padding: 1px 20px 1px 23px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  border-style:hidden;
+  background-color: #007bff; /* Blue background */
   box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Shadow */
   transition: background-color 0.3s, transform 0.3s;
 }
