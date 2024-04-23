@@ -1,34 +1,7 @@
 .App {
   text-align: center;
-  background-size: cover;
-  background-position: center;
-  background-color: #fff;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
-/*.App-header {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 20px;
-}*/
-/*.App {
-  text-align: center;
-  color: ;
-}*/
-.App-header {
-  background-color: #8692aa;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -39,6 +12,18 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+.App-header {
+  background-color: #4B6D7A;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -86,20 +71,10 @@ h1{
   top: 10%;
   text-align: center;
 }
-
-.Question-button{
-  background-color: #4a7f82;
-  color: white;
-  height: 50px;
-  width: 100%;
-  border: none;
+/*result page Back home Button*/
+.container{ 
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 10px;
-  font-size: 30px;
-  font: bold;
-}
+  width: 100px;
+  height: 50px;
+  padding-top: 100px;
+  }
