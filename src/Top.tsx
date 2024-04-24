@@ -4,18 +4,19 @@ import { Link } from "react-router-dom";
 function TopH(){
     return(
             <nav>
-                <Link to="/home">
-                        <h1>
-                            Carrer Compass
-                        </h1>
-                </Link>
                 <ul>
+                <Link to="/home">
+					<li>Home</li>
+				</Link>
                 <Link to="/basic">
-						<li>Basic Question</li>
-					</Link>
-					<Link to="/detailed">
-						<li>Detailed Question</li>
-					</Link>
+					<li>Basic Question</li>
+				</Link>
+				<Link to="/detailed">
+					<li>Detailed Question</li>
+				</Link>
+                <Link to="/result">
+					<li>Results</li>
+				</Link>
                 </ul>
             </nav>
     );
