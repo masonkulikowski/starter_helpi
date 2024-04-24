@@ -12,7 +12,12 @@ nav h1 {
 	margin: 1;
 	margin-top: -20px;
 	margin-left: 10px;
-	color: #2a2a46;
+	color: #366358;
+}
+/*For Career Compass hover*/
+nav h1:hover {
+	color: #b5b2e4;
+	transition: 0.3s ease;
 }
 /*Keeps things in one line*/
 nav ul {
