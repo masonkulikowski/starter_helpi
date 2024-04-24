@@ -73,14 +73,10 @@ function Basic_Question(){
             </div>
           </ol>
           {showResults && (
-            <Link to="/result" className="button" style={{  marginTop: '20px', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '10px', fontSize: '16px', fontWeight: 'bold', textDecoration: 'none' }}>See Results</Link>
+             <Link to="/result" className="Submit-button" style={{marginLeft: '10px',boxShadow:'0 2px 4px rgba(0,0,0,0.2)',backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '9px 27px 12px', fontSize: '16px', fontWeight: 'bold', textDecoration: 'none' }}>See Result</Link>
           )}
       </div>
       );
     }
 
 export default Basic_Question;
-
-//things I removed: && (
-//          <Button className="Back-button" onClick={goHome} style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#dc3545', color: '#fff', borderRadius: '5px', border: 'none', fontSize: '16px', fontWeight: 'bold', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>Back to Home</Button>
-//        )
