@@ -14,7 +14,7 @@ nav h1 {
 	margin-left: 10px;
 	color: #366358;
 }
-/*Career Compass hover*/
+/*For Career Compass hover*/
 nav h1:hover {
 	color: #b5b2e4;
 	transition: 0.3s ease;

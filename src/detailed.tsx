@@ -35,7 +35,7 @@ function DetailedQuestion() {
         { label: "5. What are you willing to give up for better career opportunities?", name: "question5" },
         { label: "6. How important is money?", name: "question6" },
         { label: "7. What impact do you want to make on the world?", name: "question7" },
-        { label: "", name: "blank"}
+        { label: "All done!", name: "done"}
     ];
 
     const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -67,13 +67,17 @@ function DetailedQuestion() {
                     <form onSubmit={submitAssessment}>
                         <div>
                             {currentQuestionIndex < questions.length - 1 &&(
-                                <><label>{currentQuestion.label}</label><br /><br /><textarea
+                                <><label>{currentQuestion.label}</label><br /><br />
+                                <textarea
                                     id={currentQuestion.name}
                                     name={currentQuestion.name}
                                     rows={4}
                                     cols={100}
                                     value={responses[currentQuestion.name]}
                                     onChange={handleChange} /></>
+                             )}
+                             {currentQuestionIndex === questions.length -1 &&(
+                                <><label>{currentQuestion.label}</label><br /><br /><br /><br /></>
                              )}
                         </div>
                         <div style={{ marginTop: 20 }}>
@@ -90,7 +94,7 @@ function DetailedQuestion() {
                                 <Link to="/result" className="Submit-button" style={{marginLeft: '10px',boxShadow:'0 2px 4px rgba(0,0,0,0.2)',backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '9px 27px 12px', fontSize: '16px', fontWeight: 'bold', textDecoration: 'none' }}>See Result</Link>
                             )}
                             <div className='progress'>
-              
+                            
                                 <p style={{ color: '#fff', fontSize: '18px', fontWeight: 'bold' }}>Progress</p>
                                 <div style={{
                                     backgroundColor: '#18c002',
