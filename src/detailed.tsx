@@ -65,10 +65,12 @@ function DetailedQuestion() {
                     <h1>Detailed Questions</h1>
                     <form onSubmit={submitAssessment}>
                         <div>
-                            <label>{currentQuestion.label}</label>
+                            <label>{currentQuestion.label}</label><br /><br />
                             <textarea
                                 id={currentQuestion.name}
                                 name={currentQuestion.name}
+                                rows={4}
+                                cols={100}
                                 value={responses[currentQuestion.name]}
                                 onChange={handleChange}
                             />
