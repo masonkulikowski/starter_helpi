@@ -85,7 +85,7 @@ function DetailedQuestion() {
                             )}
                             <div className='progress'>
               
-                                <p style={{ color: '#666', fontSize: '18px', fontWeight: 'bold' }}>Progress</p>
+                                <p style={{ color: '#fff', fontSize: '18px', fontWeight: 'bold' }}>Progress</p>
                                 <div style={{
                                     backgroundColor: '#18c002',
                                     height: '10px',
