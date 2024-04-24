@@ -3,7 +3,8 @@ import './App.css';
 import { responseDetailed } from './ChatGPT';
 import { Button } from 'react-bootstrap';
 
-function testingGPT(){}
+function testingGPT(){
+}
 
 function Results(){
     return(
