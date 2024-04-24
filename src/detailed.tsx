@@ -83,6 +83,28 @@ function DetailedQuestion() {
                             {currentQuestionIndex === questions.length - 1 && (
                                 <Link to="/result" className="Submit-button" style={{marginLeft: '10px',boxShadow:'0 2px 4px rgba(0,0,0,0.2)',backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '9px 27px 12px', fontSize: '16px', fontWeight: 'bold', textDecoration: 'none' }}>See Result</Link>
                             )}
+                            <div className='progress'>
+              
+                                <p style={{ color: '#fff', fontSize: '18px', fontWeight: 'bold' }}>Progress</p>
+                                <div style={{
+                                    backgroundColor: '#18c002',
+                                    height: '10px',
+                                    width: String(currentQuestionIndex * 150) + 'px',
+                                    display: "inline-block",
+                                    verticalAlign: "top",
+                                    marginLeft: "0%"
+                                }}>
+                                </div>
+                                <div style={{
+                                    backgroundColor: '#fff',
+                                    height: '10px',
+                                    width: String((7 - currentQuestionIndex) * 150) + 'px',
+                                    display: "inline-block",
+                                    verticalAlign: "top",
+                                    marginLeft: "0%"
+                                }}>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
