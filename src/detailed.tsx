@@ -88,7 +88,7 @@ function DetailedQuestion() {
                                 <Button onClick={() => handleNavigation('next')} className='Detailed-button'>Next</Button>
                             )}
                             {currentQuestionIndex === questions.length - 1 && (
-                                <Button onClick={storeResponsesAndNavigate} className='Submit-button' style={{ marginLeft: '10px' }}>See Result</Button>
+                                <Button onClick={storeResponsesAndNavigate} className='Detailed-button'>See Result</Button>
                             )}
                         </div>
                     </form>

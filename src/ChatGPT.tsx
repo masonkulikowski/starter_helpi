@@ -15,6 +15,7 @@ export async function responseDetailed(answer: string[]){
         messages:[{role: "system", content: "You are a Career Advisor"},
         {role: "user", content:'Based on these answer:' +answer + ' to these questoins' + question + ". Suggest a Career best fited for the user. keep your answer short and simple "}],
         model: "gpt-3.5-turbo",
+        temperature:.5, 
     });
     const result = completion.choices[0];
     console.log(completion.choices[0]);
