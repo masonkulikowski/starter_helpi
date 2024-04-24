@@ -24,30 +24,33 @@ function Basic_Question(){
       ];
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [progress, setProgress] = useState<number>(0);
+    const [showResults, setShowResults] = useState<boolean>(false);
 
     const handleAnswerSelect = () => {
-      if (currentQuestion < questions.length - 1) {
+      if(currentQuestion === questions.length - 1){
+        setShowResults(true);
+      } else {
         setCurrentQuestion(currentQuestion + 1);
+      }
+      if(progress < 7){
         setProgress(progress + 1);
-      } 
+      }
     };
       
 
       return (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px', backgroundColor: '#f5f5f5', borderRadius: '10px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
           <h1 style={{ marginBottom: '20px', color: '#fff', fontSize: '36px', fontWeight: 'bold' }}>Basic Questions</h1>
-            <div style={{ marginBottom: '20px', width: '80%', textAlign: 'center' }}>
-              <h3 style={{ color: '#666', fontSize: '18px' }}>{questions[currentQuestion]}</h3>
-            </div>
-            <ol type="A" style={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', justifyContent: 'flex-end', width: '80%' }}>
-              {answers[currentQuestion].map((answer, index) => (
-                <div key={index} style={{ marginBottom: '10px', flex: 1 }}>
-                  <button className="button" onClick={handleAnswerSelect} style={{ width: '100%', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '10px', fontSize: '16px', fontWeight: 'bold', border: 'none', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>{String.fromCharCode(65 + index)}. {answer}</button>
-                </div>
-                
-              ))}
-              <div className='progress'>
-              
+          <div style={{ marginBottom: '20px', width: '80%', textAlign: 'center' }}>
+            <h3 style={{ color: '#666', fontSize: '18px' }}>{questions[currentQuestion]}</h3>
+          </div>
+          <ol type="A" style={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', justifyContent: 'flex-end', width: '80%' }}>
+            {answers[currentQuestion].map((answer, index) => (
+              <div key={index} style={{ marginBottom: '10px', flex: 1 }}>
+                <button className="button" onClick={handleAnswerSelect} style={{ width: '100%', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '10px', fontSize: '16px', fontWeight: 'bold', border: 'none', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>{String.fromCharCode(65 + index)}. {answer}</button>
+              </div>
+            ))}
+            <div className='progress'>
               <p style={{ color: '#666', fontSize: '18px', fontWeight: 'bold' }}>Progress</p>
               <div style={{
                 backgroundColor: '#18c002',
@@ -68,17 +71,12 @@ function Basic_Question(){
                 }}>
               </div>
             </div>
-            </ol>
-              {currentQuestion === questions.length - 1 && (
-                <Link to="/detailed" className="button" style={{ marginTop: '20px', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '10px', fontSize: '16px', fontWeight: 'bold', textDecoration: 'none' }}>Go to Detailed Page</Link>
-              )}
-              
-        </div>
+          </ol>
+          {showResults && (
+             <Link to="/result" className="Submit-button" style={{marginLeft: '10px',boxShadow:'0 2px 4px rgba(0,0,0,0.2)',backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '9px 27px 12px', fontSize: '16px', fontWeight: 'bold', textDecoration: 'none' }}>See Result</Link>
+          )}
+      </div>
       );
-}
+    }
 
 export default Basic_Question;
-
-//things I removed: && (
-//          <Button className="Back-button" onClick={goHome} style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#dc3545', color: '#fff', borderRadius: '5px', border: 'none', fontSize: '16px', fontWeight: 'bold', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>Back to Home</Button>
-//        )
