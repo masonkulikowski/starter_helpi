@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (71 ms)
+  ✕ renders learn react link (53 ms)
 
   ● renders learn react link
 
@@ -16,14 +16,14 @@ FAIL src/App.test.tsx
           [33mclass[39m=[32m"App"[39m
         [36m>[39m
           [36m<nav>[39m
-            [36m<a[39m
-              [33mhref[39m=[32m"/home"[39m
-            [36m>[39m
-              [36m<h1>[39m
-                [0mCarrer Compass[0m
-              [36m</h1>[39m
-            [36m</a>[39m
             [36m<ul>[39m
+              [36m<a[39m
+                [33mhref[39m=[32m"/home"[39m
+              [36m>[39m
+                [36m<li>[39m
+                  [0mHome[0m
+                [36m</li>[39m
+              [36m</a>[39m
               [36m<a[39m
                 [33mhref[39m=[32m"/basic"[39m
               [36m>[39m
@@ -38,6 +38,13 @@ FAIL src/App.test.tsx
                   [0mDetailed Question[0m
                 [36m</li>[39m
               [36m</a>[39m
+              [36m<a[39m
+                [33mhref[39m=[32m"/result"[39m
+              [36m>[39m
+                [36m<li>[39m
+                  [0mResults[0m
+                [36m</li>[39m
+              [36m</a>[39m
             [36m</ul>[39m
           [36m</nav>[39m
           [36m<div[39m
@@ -47,38 +54,40 @@ FAIL src/App.test.tsx
               [33mclass[39m=[32m"App-header"[39m
             [36m>[39m
               [36m<div[39m
-                [33mstyle[39m=[32m"display: flex; flex-direction: column; justify-content: center; align-items: center;"[39m
+                [33mstyle[39m=[32m"display: flex; flex-direction: column; align-items: center;"[39m
               [36m>[39m
-                [36m<h1>[39m
+                [36m<h1[39m
+                  [33mstyle[39m=[32m"font-family: Arial, sans-serif; font-size: 2em; margin-bottom: 10px;"[39m
+                [36m>[39m
                   [0mCareer Compass[0m
                 [36m</h1>[39m
-                [36m<p[39m
-                  [33mstyle[39m=[32m"position: absolute; top: 20%; text-align: center;"[39m
+                [36m<h2[39m
+                  [33mstyle[39m=[32m"font-family: Arial, sans-serif; font-size: 1.5em;"[39m
                 [36m>[39m
-                  [0mEmpowering Your Professional Journey[0m
-                [36m</p>[39m
-                [36m<p>[39m
-                  [0mClick here for a short career assessment consisting of seven multiple [0m
-                  [36m<br />[39m
-                  [0mchoice questions for more basic results.[0m
-                [36m</p>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mtype[39m=[32m"button"[39m
+                  [0mEmpowering Your Professional Journey with short and fun career tests.[0m
+                [36m</h2>[39m
+                [36m<h2[39m
+                  [33mstyle[39m=[32m"font-family: Arial, sans-serif; font-size: 1.5em; left: 1px;"[39m
                 [36m>[39m
-                  [0mBasic Question[0m
-                [36m</button>[39m
-                [36m<p>[39m
-                  [0mClick here for a detailed career assessment. This assessment includes [0m
-                  [36m<br />[39m
-                  [0mopen-ended questions to explore your career preferences and future.[0m
-                [36m</p>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mtype[39m=[32m"button"[39m
+                  [0mWe offer:[0m
+                [36m</h2>[39m
+                [36m<div[39m
+                  [33mstyle[39m=[32m"text-align: center;"[39m
                 [36m>[39m
-                  [0mDeailed Question[0m
-                [36m</button>[39m
+                  [36m<ul[39m
+                    [33mstyle[39m=[32m"font-family: revert; font-size: 1.2em; margin-bottom: 20px; list-style-type: revert-layer; padding-inline-start: 20px; text-align: left;"[39m
+                  [36m>[39m
+                    [36m<li>[39m
+                      [0mA short career test to learn what job is right for you.[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mA detailed career assessment to explore your career preferences and future.[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0m A PDF report of your career test results send to your email.[0m
+                    [36m</li>[39m
+                  [36m</ul>[39m
+                [36m</div>[39m
               [36m</div>[39m
             [36m</header>[39m
           [36m</div>[39m
@@ -129,6 +138,25 @@ FAIL src/App.test.tsx
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
+--------------------|---------|----------|---------|---------|-------------------
+File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------|---------|----------|---------|---------|-------------------
+All files           |   16.07 |     3.84 |   19.04 |   16.36 |                   
+ App.tsx            |     100 |      100 |     100 |     100 |                   
+ GPT.tsx            |      60 |       50 |   33.33 |      60 | 11,18-24          
+ Top.tsx            |     100 |      100 |     100 |     100 |                   
+ basic.tsx          |       0 |        0 |       0 |       0 | 7-50              
+ detailed.tsx       |       0 |        0 |       0 |       0 | 18-91             
+ home.tsx           |     100 |      100 |     100 |     100 |                   
+ index.tsx          |       0 |      100 |     100 |       0 | 7-19              
+ reportWebVitals.ts |       0 |        0 |       0 |       0 | 3-10              
+ result.tsx         |       0 |      100 |       0 |       0 | 5                 
+--------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        2.97 s
+Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
 declaring it in its dependencies. This is currently working because
@@ -141,22 +169,3 @@ ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
 your devDependencies to work around this error. This will make this message
 go away.[0m
   
---------------------|---------|----------|---------|---------|-------------------
-File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
---------------------|---------|----------|---------|---------|-------------------
-All files           |   21.31 |     3.84 |   21.73 |   21.66 |                   
- App.tsx            |     100 |      100 |     100 |     100 |                   
- GPT.tsx            |      60 |       50 |   33.33 |      60 | 11,18-24          
- Top.tsx            |     100 |      100 |     100 |     100 |                   
- basic.tsx          |       0 |        0 |       0 |       0 | 7-49              
- detailed.tsx       |       0 |        0 |       0 |       0 | 18-91             
- home.tsx           |   83.33 |      100 |   66.66 |   83.33 | 15                
- index.tsx          |       0 |      100 |     100 |       0 | 7-19              
- reportWebVitals.ts |       0 |        0 |       0 |       0 | 3-10              
- result.tsx         |       0 |      100 |       0 |       0 | 5                 
---------------------|---------|----------|---------|---------|-------------------
-Test Suites: 1 failed, 1 total
-Tests:       1 failed, 1 total
-Snapshots:   0 total
-Time:        3.39 s
-Ran all test suites.
