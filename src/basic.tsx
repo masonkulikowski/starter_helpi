@@ -86,6 +86,7 @@ function Basic_Question(){
            )}
       </div>
       );
-    }
+                      }
+
 
 export default Basic_Question;
