@@ -2,25 +2,7 @@
 import { Button } from 'react-bootstrap';
 import './App.css';
 import { useNavigate } from "react-router-dom";
-//Creates a button function 
-interface NavigationButtonProps {
-    destination: string;
-    label: string;
-  }
-  
-  const NavigationButton: React.FC<NavigationButtonProps> = ({ destination, label }) => {
-    const navigate = useNavigate();
-  
-    const handleClick = () => {
-      navigate(destination);
-    };
-  
-    return (
-      <Button onClick={handleClick}>
-        {label}
-      </Button>
-    );
-  } 
+
   
 function Home(){
 return(

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function TopH(){
     return(
             <nav>
-                <ul>
+                <ul >
                 <Link to="/home">
 					<li>Home</li>
 				</Link>
