@@ -15,6 +15,7 @@
 
 .App-header {
   background-color: #4B6D7A;
+  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -88,8 +89,13 @@
 
 h1{
   position: absolute;
-  top: 10%;
+  top: 75px;
   text-align: center;
+}
+h2{
+  position: relative;
+  top: 20%;
+  text-align: left;
 }
 /*result page Back home Button*/
 .container{ 
