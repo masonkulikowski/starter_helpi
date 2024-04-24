@@ -1,7 +1,6 @@
 
-import { Button } from 'react-bootstrap';
 import './App.css';
-import { useNavigate } from "react-router-dom";
+
 
   
 function Home(){
