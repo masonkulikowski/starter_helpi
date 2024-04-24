@@ -35,6 +35,7 @@ function DetailedQuestion() {
         { label: "5. What are you willing to give up for better career opportunities?", name: "question5" },
         { label: "6. How important is money?", name: "question6" },
         { label: "7. What impact do you want to make on the world?", name: "question7" },
+        { label: "", name: "blank"}
     ];
 
     const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -65,21 +66,24 @@ function DetailedQuestion() {
                     <h1>Detailed Questions</h1>
                     <form onSubmit={submitAssessment}>
                         <div>
-                            <label>{currentQuestion.label}</label><br /><br />
-                            <textarea
-                                id={currentQuestion.name}
-                                name={currentQuestion.name}
-                                rows={4}
-                                cols={100}
-                                value={responses[currentQuestion.name]}
-                                onChange={handleChange}
-                            />
+                            {currentQuestionIndex < questions.length - 1 &&(
+                                <><label>{currentQuestion.label}</label><br /><br /><textarea
+                                    id={currentQuestion.name}
+                                    name={currentQuestion.name}
+                                    rows={4}
+                                    cols={100}
+                                    value={responses[currentQuestion.name]}
+                                    onChange={handleChange} /></>
+                             )}
                         </div>
                         <div style={{ marginTop: 20 }}>
                             {currentQuestionIndex > 0 && (
                                 <button type="button" onClick={() => handleNavigation('prev')} className='Detailed-button'>Previous</button>
                             )}
-                            {currentQuestionIndex < questions.length - 1 && (
+                            {currentQuestionIndex < questions.length - 2 && (
+                                <button type="button" onClick={() => handleNavigation('next')} className='Detailed-button'>Next</button>
+                            )}
+                            {currentQuestionIndex === questions.length - 2 && (
                                 <button type="button" onClick={() => handleNavigation('next')} className='Detailed-button'>Next</button>
                             )}
                             {currentQuestionIndex === questions.length - 1 && (
