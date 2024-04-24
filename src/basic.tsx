@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 function Basic_Question(){
@@ -25,8 +25,12 @@ function Basic_Question(){
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [progress, setProgress] = useState<number>(0);
     const [showResults, setShowResults] = useState<boolean>(false);
+    const [responses, setResponses] = useState<{ question: string, answer: string }[]>([]);
+    const navigate = useNavigate();
 
-    const handleAnswerSelect = () => {
+    const handleAnswerSelect = (answer: string) => {
+      setResponses([...responses, { question: questions[currentQuestion], answer }]);
+
       if(currentQuestion === questions.length - 1){
         setShowResults(true);
       } else {
@@ -36,49 +40,50 @@ function Basic_Question(){
         setProgress(progress + 1);
       }
     };
-      
+    
+    const handleClick = () => {
+      navigate('/result', { state: { responses } });
+    };
 
       return (
-        <div className='App'>
-          <header className='App-header'>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '40px', backgroundColor: '#4B6D7A' }}>
-            <h1 style={{ marginBottom: '20px', color: '#fff', fontSize: '40px', fontWeight: 'bold' }}>Basic Questions</h1>
-            <div style={{ marginBottom: '20px', width: '80%', textAlign: 'center', border: '20px solid black' , borderRadius: '15px' }}>
-              <h3 style={{ color: '#fff', fontSize: '30px',}}>{questions[currentQuestion]}</h3>
-              <ol type="A" style={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', justifyContent: 'flex-end', width: '80%' }}>
-                {answers[currentQuestion].map((answer, index) => (
-                  <div key={index} style={{ marginBottom: '10px', flex: 1 }}>
-                    <button className="Basic-button" onClick={handleAnswerSelect} style={{ width: '100%', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '10px', fontSize: '16px', fontWeight: 'bold', border: 'none', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>{String.fromCharCode(65 + index)}. {answer}</button>
-                  </div>
-                ))}
-                </ol>
-                </div>
-                  <div className='progress'>
-                      <p style={{ color: '#fff', fontSize: '18px', fontWeight: 'bold' }}>Progress</p>
-                      <div style={{
-                      backgroundColor: '#18c002',
-                      height: '10px',
-                      width: String(progress * 150) + 'px',
-                      display: "inline-block",
-                      verticalAlign: "top",
-                      marginLeft: "0%"
-                      }}>
-                    </div>
-                    <div style={{
-                      backgroundColor: '#fff',
-                      height: '10px',
-                      width: String((7 - progress) * 150) + 'px',
-                      display: "inline-block",
-                      verticalAlign: "top",
-                      marginLeft: "0%"
-                      }}>
-                    </div>
-                  </div>
-                      {showResults && (
-                        <Link to="/result" className="Submit-button" style={{marginLeft: '10px',boxShadow:'0 2px 4px rgba(0,0,0,0.2)',backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '9px 27px 12px', fontSize: '16px', fontWeight: 'bold', textDecoration: 'none' }}>See Result</Link>
-                      )}
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px', backgroundColor: '#f5f5f5', borderRadius: '10px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
+          <h1 style={{ marginBottom: '20px', color: '#fff', fontSize: '36px', fontWeight: 'bold' }}>Basic Questions</h1>
+          <div style={{ marginBottom: '20px', width: '80%', textAlign: 'center' }}>
+            <h3 style={{ color: '#666', fontSize: '18px' }}>{questions[currentQuestion]}</h3>
+          </div>
+          <ol type="A" style={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', justifyContent: 'flex-end', width: '80%' }}>
+            {answers[currentQuestion].map((answer, index) => (
+              <div key={index} style={{ marginBottom: '10px', flex: 1 }}>
+                <button className="button" onClick={() => handleAnswerSelect(answer)} style={{ width: '100%', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '10px', fontSize: '16px', fontWeight: 'bold', border: 'none', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>{String.fromCharCode(65 + index)}. {answer}</button>
+              </div>
+            ))}
+            <div className='progress'>
+              <p style={{ color: '#666', fontSize: '18px', fontWeight: 'bold' }}>Progress</p>
+              <div style={{
+                backgroundColor: '#18c002',
+                height: '10px',
+                width: String(progress * 150) + 'px',
+                display: "inline-block",
+                verticalAlign: "top",
+                marginLeft: "0%"
+                }}>
+              </div>
+              <div style={{
+                backgroundColor: '#fff',
+                height: '10px',
+                width: String((7 - progress) * 150) + 'px',
+                display: "inline-block",
+                verticalAlign: "top",
+                marginLeft: "0%"
+                }}>
+              </div>
             </div>
-        </header>
+          </ol>
+           {showResults && (
+             <button onClick={handleClick} className="submit-button">
+             See Result
+           </button>
+           )}
       </div>
       );
                       }
