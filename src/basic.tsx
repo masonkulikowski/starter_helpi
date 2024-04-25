@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 function Basic_Question(){
@@ -25,8 +25,12 @@ function Basic_Question(){
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [progress, setProgress] = useState<number>(0);
     const [showResults, setShowResults] = useState<boolean>(false);
+    const [responses, setResponses] = useState<{ question: string, answer: string }[]>([]);
+    const navigate = useNavigate();
 
-    const handleAnswerSelect = () => {
+    const handleAnswerSelect = (answer: string) => {
+      setResponses([...responses, { question: questions[currentQuestion], answer }]);
+
       if(currentQuestion === questions.length - 1){
         setShowResults(true);
       } else {
@@ -36,7 +40,10 @@ function Basic_Question(){
         setProgress(progress + 1);
       }
     };
-      
+    
+    const handleClick = () => {
+      navigate('/result', { state: { responses } });
+    };
 
       return (
         <div className='App'>
@@ -73,7 +80,7 @@ function Basic_Question(){
                       marginLeft: "0%"
                       }}>
                     </div>
-                  </div>
+                   </div>
                       {showResults && (
                         <Link to="/result" className="Submit-button" style={{marginLeft: '10px',boxShadow:'0 2px 4px rgba(0,0,0,0.2)',backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '9px 27px 12px', fontSize: '16px', fontWeight: 'bold', textDecoration: 'none' }}>See Result</Link>
                       )}
@@ -81,7 +88,5 @@ function Basic_Question(){
         </header>
       </div>
       );
-                      }
-
-
+      }
 export default Basic_Question;
