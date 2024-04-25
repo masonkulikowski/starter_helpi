@@ -48,11 +48,11 @@ function Basic_Question(){
       return (
         <div className='App'>
         <header className='App-header'>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px', backgroundColor: '#f5f5f5', borderRadius: '10px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
-          <h1 style={{ marginBottom: '20px', color: '#fff', fontSize: '36px', fontWeight: 'bold' }}>Basic Questions</h1>
-          <div style={{ marginBottom: '20px', width: '80%', textAlign: 'center' }}>
-            <h3 style={{ color: '#666', fontSize: '18px' }}>{questions[currentQuestion]}</h3>
-          </div>
+       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '40px', backgroundColor: '#4B6D7A' }}>
+            <h1 style={{ marginBottom: '20px', color: '#fff', fontSize: '40px', fontWeight: 'bold' }}>Basic Questions</h1>
+            <div style={{ marginBottom: '20px', width: '80%', textAlign: 'center', border: '10px solid black' , borderRadius: '15px' }}>
+              <h3 style={{ color: '#fff', fontSize: '30px',}}>{questions[currentQuestion]}</h3>
+          
           <ol type="A" style={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', justifyContent: 'flex-end', width: '80%' }}>
             {answers[currentQuestion].map((answer, index) => (
               <div key={index} style={{ marginBottom: '10px', flex: 1 }}>
@@ -60,7 +60,7 @@ function Basic_Question(){
               </div>
             ))}
            </ol>
-        </div>
+           </div>
             <div className='progress'>
               <p style={{ color: '#666', fontSize: '18px', fontWeight: 'bold' }}>Progress</p>
               <div style={{
@@ -87,6 +87,7 @@ function Basic_Question(){
              See Result
            </button>
            )}
+            </div>
       </header>
       </div>
       );
