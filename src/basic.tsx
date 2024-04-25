@@ -46,6 +46,8 @@ function Basic_Question(){
     };
 
       return (
+        <div className='App'>
+        <header className='App-header'>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px', backgroundColor: '#f5f5f5', borderRadius: '10px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
           <h1 style={{ marginBottom: '20px', color: '#fff', fontSize: '36px', fontWeight: 'bold' }}>Basic Questions</h1>
           <div style={{ marginBottom: '20px', width: '80%', textAlign: 'center' }}>
@@ -84,6 +86,8 @@ function Basic_Question(){
              See Result
            </button>
            )}
+      </div>
+      </header>
       </div>
       );
                       }
