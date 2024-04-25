@@ -90,7 +90,5 @@ function Basic_Question(){
       </header>
       </div>
       );
-                      }
-
-
+      }
 export default Basic_Question;
