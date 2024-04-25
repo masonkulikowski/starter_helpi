@@ -46,10 +46,12 @@ function Basic_Question(){
     };
 
       return (
+    <div className='App'>
+      <header className='App-header'>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px', backgroundColor: '#f5f5f5', borderRadius: '10px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
           <h1 style={{ marginBottom: '20px', color: '#fff', fontSize: '36px', fontWeight: 'bold' }}>Basic Questions</h1>
           <div style={{ marginBottom: '20px', width: '80%', textAlign: 'center' }}>
-            <h3 style={{ color: '#666', fontSize: '18px' }}>{questions[currentQuestion]}</h3>
+            <h3 style={{ color: '#666', fontSize: '24px' }}>{questions[currentQuestion]}</h3>
           </div>
           <ol type="A" style={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', justifyContent: 'flex-end', width: '80%' }}>
             {answers[currentQuestion].map((answer, index) => (
@@ -57,6 +59,7 @@ function Basic_Question(){
                 <button className="button" onClick={() => handleAnswerSelect(answer)} style={{ width: '100%', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '10px', fontSize: '16px', fontWeight: 'bold', border: 'none', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>{String.fromCharCode(65 + index)}. {answer}</button>
               </div>
             ))}
+                 </ol>
             <div className='progress'>
               <p style={{ color: '#666', fontSize: '18px', fontWeight: 'bold' }}>Progress</p>
               <div style={{
@@ -78,12 +81,14 @@ function Basic_Question(){
                 }}>
               </div>
             </div>
-          </ol>
+
            {showResults && (
              <button onClick={handleClick} className="submit-button">
              See Result
            </button>
            )}
+      </div>
+      </header>
       </div>
       );
                       }
