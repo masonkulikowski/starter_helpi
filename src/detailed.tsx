@@ -62,8 +62,9 @@ function DetailedQuestion() {
     return (
         <div className='App'>
             <header className='App-header'>
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    <h1>Detailed Questions</h1>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '40px', backgroundColor: '#4B6D7A' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', color:"#000",marginBottom: '20px', fontSize: '40px', fontWeight: 'bold'}}>
+                    <h1><b>Detailed Questions</b></h1> </div>
                     <form onSubmit={submitAssessment}>
                         <div>
                             {currentQuestionIndex < questions.length - 1 &&(
@@ -72,7 +73,7 @@ function DetailedQuestion() {
                                     id={currentQuestion.name}
                                     name={currentQuestion.name}
                                     rows={4}
-                                    cols={100}
+                                    cols={60}
                                     value={responses[currentQuestion.name]}
                                     onChange={handleChange} /></>
                              )}

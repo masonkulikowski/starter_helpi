@@ -49,8 +49,8 @@ function Basic_Question(){
         <div className='App'>
         <header className='App-header'>
        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '40px', backgroundColor: '#4B6D7A' }}>
-            <h1 style={{ marginBottom: '20px', color: '#fff', fontSize: '40px', fontWeight: 'bold' }}>Basic Questions</h1>
-            <div style={{ marginBottom: '20px', width: '80%', textAlign: 'center', border: '10px solid black' , borderRadius: '15px' }}>
+            <h1 style={{ marginBottom: '20px', color: '#000', fontSize: '40px', fontWeight: 'bold' }}>Basic Questions</h1>
+            <div style={{ marginBottom: '20px', width: '80%', textAlign: 'center'}}>
               <h3 style={{ color: '#fff', fontSize: '30px',}}>{questions[currentQuestion]}</h3>
           
           <ol type="A" style={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', justifyContent: 'flex-end', width: '80%' }}>
@@ -62,7 +62,7 @@ function Basic_Question(){
            </ol>
            </div>
             <div className='progress'>
-              <p style={{ color: '#666', fontSize: '18px', fontWeight: 'bold' }}>Progress</p>
+              <p style={{ color: '#fff', fontSize: '18px', fontWeight: 'bold' }}>Progress</p>
               <div style={{
                 backgroundColor: '#18c002',
                 height: '10px',

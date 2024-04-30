@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 
 function TopH(){
     return(
+        
             <nav>
-                <ul >
+                <p>   Career Compass</p>
+                <ul>
                 <Link to="/home">
 					<li>Home</li>
 				</Link>
