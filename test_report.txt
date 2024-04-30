@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (76 ms)
+  ✕ renders learn react link (71 ms)
 
   ● renders learn react link
 
@@ -154,20 +154,7 @@ FAIL src/App.test.tsx
             [36m>[39m
               [36m<b>[39m
                 [36m<br />[39m
-                [0mInserting images in here[0m
-                [36m<br />[39m
-              [36m</b>[39m
-            [36m</h4>[39m
-          [36m</div>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"w3-container"[39m
-          [36m>[39m
-            [36m<h4[39m
-              [33mclass[39m=[32m"w3-xxxlarge w3-text-blue"[39m
-            [36m>[39m
-              [36m<b>[39m
-                [36m<br />[39m
-                [0mPackages[0m
+                [0mComparison of assessmnets[0m
                 [36m<br />[39m
               [36m</b>[39m
             [36m</h4>[39m
@@ -212,21 +199,6 @@ FAIL src/App.test.tsx
                 [36m>[39m
                   [0mQuality of assessment: Moderate[0m
                 [36m</li>[39m
-                [36m<li[39m
-                  [33mclass[39m=[32m"w3-padding-16"[39m
-                [36m>[39m
-                  [0m$ 19 per attempt[0m
-                [36m</li>[39m
-                [36m<li[39m
-                  [33mclass[39m=[32m"w3-light-grey w3-padding-24"[39m
-                [36m>[39m
-                  [36m<a[39m
-                    [33mclass[39m=[32m"w3-button w3-white w3-padding-large w3-hover-black"[39m
-                    [33mhref[39m=[32m"/basic"[39m
-                  [36m>[39m
-                    [0mBasic[0m
-                  [36m</a>[39m
-                [36m</li>[39m
               [36m</ul>[39m
             [36m</div>[39m
             [36m<div[39m
@@ -264,21 +236,6 @@ FAIL src/App.test.tsx
                   [33mclass[39m=[32m"w3-padding-16"[39m
                 [36m>[39m
                   [0mQuality of assessment: Excellent[0m
-                [36m</li>[39m
-                [36m<li[39m
-                  [33mclass[39m=[32m"w3-padding-16"[39m
-                [36m>[39m
-                  [0m$ 29 per attempt[0m
-                [36m</li>[39m
-                [36m<li[39m
-                  [33mclass[39m=[32m"w3-light-grey w3-padding-24"[39m
-                [36m>[39m
-                  [36m<a[39m
-                    [33mclass[39m=[32m"w3-button w3-white w3-padding-large w3-hover-black"[39m
-                    [33mhref[39m=[32m"/detailed"[39m
-                  [36m>[39m
-                    [0mDetailed[0m
-                  [36m</a>[39m
                 [36m</li>[39m
               [36m</ul>[39m
             [36m</div>[39m
@@ -501,7 +458,7 @@ All files           |   13.92 |    10.71 |   15.38 |    14.1 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.169 s
+Time:        3.219 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
