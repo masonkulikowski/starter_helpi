@@ -16,9 +16,6 @@ function TopH(){
 				<Link to="/detailed">
 					<li>Detailed Question</li>
 				</Link>
-                <Link to="/result">
-					<li>Results</li>
-				</Link>
                 </ul>
             </nav>
     );
