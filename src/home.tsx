@@ -1,6 +1,4 @@
 import './home.css';
-import { Link } from 'react-router-dom';
-
 
 function Home(){
 return(
@@ -34,8 +32,6 @@ return(
           <li>Personalized Feedback: Offers personalized feedback and career recommendations based on assessment results.</li>
         </ul>
       <h6><b>The Detailed Assessment (10 minutes) is recommended to get the best results.</b></h6>
-    </div><div className="w3-container">
-      <h4 className="w3-xxxlarge w3-text-blue"><b><br></br>Inserting images in here<br></br></b></h4>
     </div>
     <div className="w3-container">
       <h4 className="w3-xxxlarge w3-text-blue"><b><br></br>Comparison of assessmnets<br></br></b></h4>
@@ -130,5 +126,8 @@ return(
     <img src="engineering.jpeg" width="100%" alt="Concrete meets bricks"></img>
       <img src="engineering.jpeg" width="100%" alt="Light, white and tight scandinavian design"></img>
       <img src="/engineering.jpeg" width="100%"  alt="White walls with designer chairs"></img>
+    </div>
+    <div className="w3-container">
+      <h4 className="w3-xxxlarge w3-text-blue"><b><br></br>Inserting images in here<br></br></b></h4>
     </div>*/
 export default Home;
