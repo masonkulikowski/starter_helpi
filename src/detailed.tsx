@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { responseDetailed } from './ChatGPT';
+
+const globalResponses: string[] = [];
+
 
 interface Responses {
     question1: string;
@@ -26,7 +30,7 @@ function DetailedQuestion() {
     });
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-
+    const navigate = useNavigate();
     const questions = [
         { label: "1. What careers seem interesting to you? Why?", name: "question1" },
         { label: "2. What are your current skills? (Hard Skills and Soft Skills)", name: "question2" },
@@ -58,6 +62,15 @@ function DetailedQuestion() {
     };
 
     const currentQuestion = questions[currentQuestionIndex];
+
+    const storeResponsesAndNavigate = () => {
+        const holder = JSON.stringify(responses);
+        globalResponses.push(holder);
+        console.log('Global Responses: ', globalResponses);
+        responseDetailed(globalResponses);
+        navigate("/result");
+    };
+
 
     return (
         <div className='App'>
@@ -92,7 +105,7 @@ function DetailedQuestion() {
                                 <button type="button" onClick={() => handleNavigation('next')} className='Detailed-button'>Next</button>
                             )}
                             {currentQuestionIndex === questions.length - 1 && (
-                                <Link to="/result" className="Submit-button" style={{marginLeft: '10px',boxShadow:'0 2px 4px rgba(0,0,0,0.2)',backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '9px 27px 12px', fontSize: '16px', fontWeight: 'bold', textDecoration: 'none' }}>See Result</Link>
+                                <button type = "button" onClick={storeResponsesAndNavigate} className='Detailed-button'>See Result</button>
                             )}
                             <div className='progress'>
                             
