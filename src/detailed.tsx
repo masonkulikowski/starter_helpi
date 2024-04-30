@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { responseDetailed } from './ChatGPT';
 
@@ -106,8 +105,7 @@ function DetailedQuestion() {
                                 <button type="button" onClick={() => handleNavigation('next')} className='Detailed-button'>Next</button>
                             )}
                             {currentQuestionIndex === questions.length - 1 && (
-                                <Button onClick={storeResponsesAndNavigate} className='Detailed-button'>See Result</Button>
-
+                                <button type = "button" onClick={storeResponsesAndNavigate} className='Detailed-button'>See Result</button>
                             )}
                             <div className='progress'>
                             
