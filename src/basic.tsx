@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 function Basic_Question(){
@@ -25,8 +25,12 @@ function Basic_Question(){
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [progress, setProgress] = useState<number>(0);
     const [showResults, setShowResults] = useState<boolean>(false);
+    const [responses, setResponses] = useState<{ question: string, answer: string }[]>([]);
+    const navigate = useNavigate();
 
-    const handleAnswerSelect = () => {
+    const handleAnswerSelect = (answer: string) => {
+      setResponses([...responses, { question: questions[currentQuestion], answer }]);
+
       if(currentQuestion === questions.length - 1){
         setShowResults(true);
       } else {
@@ -36,7 +40,10 @@ function Basic_Question(){
         setProgress(progress + 1);
       }
     };
-      
+    
+    const handleClick = () => {
+      navigate('/result', { state: { responses } });
+    };
 
       return (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px', backgroundColor: '#f5f5f5', borderRadius: '10px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
@@ -47,7 +54,7 @@ function Basic_Question(){
           <ol type="A" style={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', justifyContent: 'flex-end', width: '80%' }}>
             {answers[currentQuestion].map((answer, index) => (
               <div key={index} style={{ marginBottom: '10px', flex: 1 }}>
-                <button className="button" onClick={handleAnswerSelect} style={{ width: '100%', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '10px', fontSize: '16px', fontWeight: 'bold', border: 'none', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>{String.fromCharCode(65 + index)}. {answer}</button>
+                <button className="button" onClick={() => handleAnswerSelect(answer)} style={{ width: '100%', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '10px', fontSize: '16px', fontWeight: 'bold', border: 'none', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>{String.fromCharCode(65 + index)}. {answer}</button>
               </div>
             ))}
             <div className='progress'>
@@ -72,11 +79,14 @@ function Basic_Question(){
               </div>
             </div>
           </ol>
-          {showResults && (
-             <Link to="/result" className="Submit-button" style={{marginLeft: '10px',boxShadow:'0 2px 4px rgba(0,0,0,0.2)',backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '9px 27px 12px', fontSize: '16px', fontWeight: 'bold', textDecoration: 'none' }}>See Result</Link>
-          )}
+           {showResults && (
+             <button onClick={handleClick} className="submit-button">
+             See Result
+           </button>
+           )}
       </div>
       );
-    }
+                      }
+
 
 export default Basic_Question;
