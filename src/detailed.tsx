@@ -4,6 +4,9 @@ import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { responseDetailed } from './ChatGPT';
 
+const globalResponses: string[] = [];
+
+
 interface Responses {
     question1: string;
     question2: string;
@@ -15,10 +18,8 @@ interface Responses {
     [key: string]: string;  // Index signature
 }
 
-// Global array to store responses
-const globalResponses: string[] = [];
-
 function DetailedQuestion() {
+    // States for all detailed questions responses
     const [responses, setResponses] = useState<Responses>({
         question1: '',
         question2: '',
@@ -29,9 +30,8 @@ function DetailedQuestion() {
         question7: '',
     });
 
-    const navigate = useNavigate();
-
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+    const navigate = useNavigate();
     const questions = [
         { label: "1. What careers seem interesting to you? Why?", name: "question1" },
         { label: "2. What are your current skills? (Hard Skills and Soft Skills)", name: "question2" },
@@ -50,13 +50,11 @@ function DetailedQuestion() {
             [name]: value,
         }));
     };
-    const storeResponsesAndNavigate = () => {
-        const holder = JSON.stringify(responses);
-        globalResponses.push(holder);
-        console.log('Global Responses: ', globalResponses);
-        responseDetailed(globalResponses);
-        navigate("/result");
-        };
+
+    const submitAssessment = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        console.log('User Responses: ', responses);
+    };
 
     const handleNavigation = (direction: 'next' | 'prev') => {
         setCurrentQuestionIndex(prevIndex => 
@@ -66,12 +64,21 @@ function DetailedQuestion() {
 
     const currentQuestion = questions[currentQuestionIndex];
 
+    const storeResponsesAndNavigate = () => {
+        const holder = JSON.stringify(responses);
+        globalResponses.push(holder);
+        console.log('Global Responses: ', globalResponses);
+        responseDetailed(globalResponses);
+        navigate("/result");
+    };
+
+
     return (
         <div className='App'>
             <header className='App-header'>
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                     <h1>Detailed Questions</h1>
-                    <form onSubmit={(e) => e.preventDefault()}>
+                    <form onSubmit={submitAssessment}>
                         <div>
                             {currentQuestionIndex < questions.length - 1 &&(
                                 <><label>{currentQuestion.label}</label><br /><br />
@@ -89,14 +96,40 @@ function DetailedQuestion() {
                         </div>
                         <div style={{ marginTop: 20 }}>
                             {currentQuestionIndex > 0 && (
-                                <Button onClick={() => handleNavigation('prev')} className='Detailed-button'>Previous</Button>
+                                <button type="button" onClick={() => handleNavigation('prev')} className='Detailed-button'>Previous</button>
                             )}
-                            {currentQuestionIndex < questions.length - 1 && (
-                                <Button onClick={() => handleNavigation('next')} className='Detailed-button'>Next</Button>
+                            {currentQuestionIndex < questions.length - 2 && (
+                                <button type="button" onClick={() => handleNavigation('next')} className='Detailed-button'>Next</button>
+                            )}
+                            {currentQuestionIndex === questions.length - 2 && (
+                                <button type="button" onClick={() => handleNavigation('next')} className='Detailed-button'>Next</button>
                             )}
                             {currentQuestionIndex === questions.length - 1 && (
                                 <Button onClick={storeResponsesAndNavigate} className='Detailed-button'>See Result</Button>
+
                             )}
+                            <div className='progress'>
+                            
+                                <p style={{ color: '#fff', fontSize: '18px', fontWeight: 'bold' }}>Progress</p>
+                                <div style={{
+                                    backgroundColor: '#18c002',
+                                    height: '10px',
+                                    width: String(currentQuestionIndex * 150) + 'px',
+                                    display: "inline-block",
+                                    verticalAlign: "top",
+                                    marginLeft: "0%"
+                                }}>
+                                </div>
+                                <div style={{
+                                    backgroundColor: '#fff',
+                                    height: '10px',
+                                    width: String((7 - currentQuestionIndex) * 150) + 'px',
+                                    display: "inline-block",
+                                    verticalAlign: "top",
+                                    marginLeft: "0%"
+                                }}>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
