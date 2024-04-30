@@ -1,6 +1,5 @@
 import './home.css';
 import { Link } from 'react-router-dom';
-import './engineering.jpeg';
 
 
 function Home(){
