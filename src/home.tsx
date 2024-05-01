@@ -48,6 +48,10 @@ return(
         </ul>
       </div>
 
+
+     
+
+
       <div className="w3-half ">
         <ul className="w3-ul w3-light-grey w3-center">
           <li className="w3-blue w3-xlarge w3-padding-32">Detalied Questions</li>
@@ -117,15 +121,16 @@ return(
 );
 }
 /*<div className="w3-half">
-      <img src="engineering.jpeg" width="100%" alt="Concrete meets bricks"></img>
-      <img src="engineering.jpeg" width="100%" alt="Light, white and tight scandinavian design"></img>
-      <img src="images/engineering.jpeg" width="100%"  alt="White walls with designer chairs"></img>
+ <img src="engineering.jpeg" width="100%" alt=""></img>
+      <img src="engineering.jpeg" width="100%" alt=></img>
+      <img src="engineering.jpeg" width="100%" alt=></img>
+      <img src="images/engineering.jpeg" width="100%"  alt=""></img>
     </div>
 
     <div className="w3-half">
-    <img src="engineering.jpeg" width="100%" alt="Concrete meets bricks"></img>
-      <img src="engineering.jpeg" width="100%" alt="Light, white and tight scandinavian design"></img>
-      <img src="/engineering.jpeg" width="100%"  alt="White walls with designer chairs"></img>
+    <img src="engineering.jpeg" width="100%" alt=""></img>
+      <img src="engineering.jpeg" width="100%" alt=""></img>
+      <img src="/engineering.jpeg" width="100%"  alt=""></img>
     </div>
     <div className="w3-container">
       <h4 className="w3-xxxlarge w3-text-blue"><b><br></br>Inserting images in here<br></br></b></h4>
