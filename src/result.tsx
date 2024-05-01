@@ -1,9 +1,20 @@
 import { Link, useLocation } from 'react-router-dom';
 import './App.css';
+import { useState } from 'react';
+
 
 function Results(){
     const location = useLocation();
     const responses = (location.state as { responses: { question: string, answer: string }[] }).responses;
+    const[email, setEmail] = useState<string>("");
+
+    function updateEmail(event: React.ChangeEvent<HTMLTextAreaElement>) {
+        setEmail(event.target.value);
+    };
+    function send() {
+        
+    }
+
     return(
         <div className='App'>
             <header className="App-header">
@@ -20,7 +31,15 @@ function Results(){
                         Back to Home
                     </Link>
                 </div>
-          </header>
+                <div>
+                    <textarea
+                    rows={2}
+                    cols={20}
+                    onChange={updateEmail}
+                    /><br />
+                    <button type="button" onClick={() => send} className='Detailed-button'>Send Email</button>
+                </div>
+            </header>
         </div>
     );
 
