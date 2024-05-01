@@ -39,7 +39,7 @@ function DetailedQuestion() {
         { label: "5. What are you willing to give up for better career opportunities?", name: "question5" },
         { label: "6. How important is money?", name: "question6" },
         { label: "7. What impact do you want to make on the world?", name: "question7" },
-        { label: "All done!", name: "done"}
+        { label: "You have completed all questions!", name: "done"}
     ];
 
     const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -105,7 +105,7 @@ function DetailedQuestion() {
                                 <button type="button" onClick={() => handleNavigation('next')} className='Detailed-button'>Next</button>
                             )}
                             {currentQuestionIndex === questions.length - 1 && (
-                                <button type = "button" onClick={storeResponsesAndNavigate} className='Detailed-button'>See Result</button>
+                                <button type = "button" onClick={storeResponsesAndNavigate} className='Detailed-button'>Results</button>
                             )}
                             <div className='progress'>
                             
