@@ -1,6 +1,4 @@
 import './home.css';
-import { Link } from 'react-router-dom';
-
 
 function Home(){
 return(
@@ -34,11 +32,9 @@ return(
           <li>Personalized Feedback: Offers personalized feedback and career recommendations based on assessment results.</li>
         </ul>
       <h6><b>The Detailed Assessment (10 minutes) is recommended to get the best results.</b></h6>
-    </div><div className="w3-container">
-      <h4 className="w3-xxxlarge w3-text-blue"><b><br></br>Inserting images in here<br></br></b></h4>
     </div>
     <div className="w3-container">
-      <h4 className="w3-xxxlarge w3-text-blue"><b><br></br>Packages<br></br></b></h4>
+      <h4 className="w3-xxxlarge w3-text-blue"><b><br></br>Comparison of assessmnets<br></br></b></h4>
     </div>
     <br></br><div className="w3-row-padding">
       <div className="w3-half w3-margin-bottom">
@@ -49,12 +45,12 @@ return(
           <li className="w3-padding-16">Number of questions: 7</li>
           <li className="w3-padding-16">Structure:	Multiple-choice - structured questions with predefined answers.</li>
           <li className="w3-padding-16">Quality of assessment: Moderate</li>
-          <li className="w3-padding-16">$ 19 per attempt</li>
-          <li className="w3-light-grey w3-padding-24">
-            <Link to="/basic" className="w3-button w3-white w3-padding-large w3-hover-black">Basic</Link>
-          </li>
         </ul>
       </div>
+
+
+     
+
 
       <div className="w3-half ">
         <ul className="w3-ul w3-light-grey w3-center">
@@ -64,10 +60,6 @@ return(
           <li className="w3-padding-16">Number of questions: 7</li>
           <li className="w3-padding-16">Structure: Open-ended questions - questions requiring elaboration.</li>
           <li className="w3-padding-16">Quality of assessment: Excellent</li>
-          <li className="w3-padding-16">$ 29 per attempt</li>
-          <li className="w3-light-grey w3-padding-24">
-            <Link to="/detailed" className="w3-button w3-white w3-padding-large w3-hover-black">Detailed</Link>
-          </li>
         </ul>
       </div>
       <div className="w3-row-padding w3-grayscale">
@@ -129,14 +121,18 @@ return(
 );
 }
 /*<div className="w3-half">
-      <img src="engineering.jpeg" width="100%" alt="Concrete meets bricks"></img>
-      <img src="engineering.jpeg" width="100%" alt="Light, white and tight scandinavian design"></img>
-      <img src="images/engineering.jpeg" width="100%"  alt="White walls with designer chairs"></img>
+ <img src="engineering.jpeg" width="100%" alt=""></img>
+      <img src="engineering.jpeg" width="100%" alt=></img>
+      <img src="engineering.jpeg" width="100%" alt=></img>
+      <img src="images/engineering.jpeg" width="100%"  alt=""></img>
     </div>
 
     <div className="w3-half">
-    <img src="engineering.jpeg" width="100%" alt="Concrete meets bricks"></img>
-      <img src="engineering.jpeg" width="100%" alt="Light, white and tight scandinavian design"></img>
-      <img src="/engineering.jpeg" width="100%"  alt="White walls with designer chairs"></img>
+    <img src="engineering.jpeg" width="100%" alt=""></img>
+      <img src="engineering.jpeg" width="100%" alt=""></img>
+      <img src="/engineering.jpeg" width="100%"  alt=""></img>
+    </div>
+    <div className="w3-container">
+      <h4 className="w3-xxxlarge w3-text-blue"><b><br></br>Inserting images in here<br></br></b></h4>
     </div>*/
 export default Home;

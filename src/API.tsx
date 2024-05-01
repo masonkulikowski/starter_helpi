@@ -1,7 +1,7 @@
 import {useState} from "react";
 import { Button, Form } from 'react-bootstrap';
 import './App.css';
-export default function GPT(): JSX.Element{
+export default function APIsuff(): JSX.Element{
 
     //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
     let keyData = "";

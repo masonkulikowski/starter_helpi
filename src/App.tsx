@@ -1,7 +1,7 @@
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css';
-import GPT from "./GPT";
+import APIsuff from "./API";
 import Detailed_Question from "./detailed";
 import Basic_Question from './basic';
 import Home from './home';
@@ -22,7 +22,7 @@ function App(): JSX.Element {
            <Route path="/detailed" Component={Detailed_Question} />
            <Route path="/result" Component={Results} />
         </Routes>
-        <GPT />
+        <APIsuff />
       </div>
     </Router>
   
