@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (70 ms)
+  ✕ renders learn react link (78 ms)
 
   ● renders learn react link
 
@@ -43,108 +43,153 @@ FAIL src/App.test.tsx
               [36m</a>[39m
             [36m</ul>[39m
           [36m</nav>[39m
-          [36m<h3[39m
-            [33mclass[39m=[32m"w3-jumbo"[39m
-            [33mproperty[39m=[32m"center"[39m
-          [36m>[39m
-            [36m<b>[39m
-              [0mCareer Compass[0m
-            [36m</b>[39m
-          [36m</h3>[39m
-          [36m<h4[39m
+          [36m<div[39m
             [33mclass[39m=[32m"w3-container"[39m
           [36m>[39m
-            [0mEmpowering Your Professional Journey with short and fun career tests.[0m
-          [36m</h4>[39m
+            [36m<h3[39m
+              [33mclass[39m=[32m"w3-jumbo"[39m
+              [33mproperty[39m=[32m"center"[39m
+            [36m>[39m
+              [36m<b>[39m
+                [0mCareer Compass[0m
+              [36m</b>[39m
+            [36m</h3>[39m
+            [36m<h4[39m
+              [33mclass[39m=[32m"w3-container"[39m
+            [36m>[39m
+              [0mEmpowering Your Professional Journey with short and fun career tests.[0m
+            [36m</h4>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"w3-half"[39m
+            [36m>[39m
+              [36m<h4[39m
+                [33mclass[39m=[32m"w3-xxxlarge w3-text-blue"[39m
+              [36m>[39m
+                [36m<b>[39m
+                  [0mBasic Questions[0m
+                [36m</b>[39m
+              [36m</h4>[39m
+              [36m<h5[39m
+                [33mclass[39m=[32m"w3-left-align"[39m
+              [36m>[39m
+                [0mA basic career test helps individuals explore potential career paths by assessing their interests, personality traits, and skills. It provides an overview of suitable career options based on the assessment results.[0m
+              [36m</h5>[39m
+              [36m<ul[39m
+                [33mclass[39m=[32m"w3-left-align"[39m
+              [36m>[39m
+                [36m<li>[39m
+                  [0mPersonality Assessment: It may assess personality traits to help identify suitable work environments and roles.[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mSkills Assessment: Assesses skills to identify strengths and areas for development.[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mValues Assessment: Identifies personal values related to work preferences.[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mCareer Matches: Provides a list of potential career matches based on interests, personality, skills, and values.[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mCareer Information: Offers information about various careers, including job duties, requirements, salary, and outlook.[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mFeedback and Guidance: Provides feedback and guidance based on assessment results.[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mReport or Summary: Provides a report summarizing strengths, preferences, and suggested career paths.[0m
+                [36m</li>[39m
+                [36m<br />[39m
+              [36m</ul>[39m
+              [36m<h6>[39m
+                [36m<b>[39m
+                  [0mThe Basic Assessment (2 minutes) is recommended for use when time is limited.[0m
+                [36m</b>[39m
+              [36m</h6>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"w3-half"[39m
+            [36m>[39m
+              [36m<h4[39m
+                [33mclass[39m=[32m"w3-xxxlarge w3-text-blue"[39m
+              [36m>[39m
+                [36m<b>[39m
+                  [0mDetailed Questions[0m
+                [36m</b>[39m
+              [36m</h4>[39m
+              [36m<h5[39m
+                [33mclass[39m=[32m"w3-left-align"[39m
+              [36m>[39m
+                [0mA detailed career test offers a comprehensive assessment of an individual's interests, personality, values, and skills. It provides in-depth insights into various career paths, including job descriptions, educational requirements, and career development resources.[0m
+              [36m</h5>[39m
+              [36m<ul[39m
+                [33mclass[39m=[32m"w3-left-align"[39m
+              [36m>[39m
+                [36m<li>[39m
+                  [0mAptitude Testing: Includes aptitude testing to identify specific abilities and strengths relevant to different career paths.[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mWork Environment Preferences: Tests preferences for work environments, such as team vs. independent work.[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mIndustry Matching: Provides specific recommendations for industries and job roles based on assessment results.[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mCareer Path Exploration: Offers extensive information about various career paths, including job descriptions and growth opportunities.[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mProfessional Development Resources: Provides resources for networking, resume writing, and skill development.[0m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [0mPersonalized Feedback: Offers personalized feedback and career recommendations based on assessment results.[0m
+                [36m</li>[39m
+              [36m</ul>[39m
+              [36m<h6>[39m
+                [36m<b>[39m
+                  [0mThe Detailed Assessment (10 minutes) is recommended to get the best results.[0m
+                [36m</b>[39m
+              [36m</h6>[39m
+            [36m</div>[39m
+          [36m</div>[39m
           [36m<div[39m
-            [33mclass[39m=[32m"w3-half"[39m
+            [33mclass[39m=[32m"w3-container"[39m
           [36m>[39m
             [36m<h4[39m
               [33mclass[39m=[32m"w3-xxxlarge w3-text-blue"[39m
             [36m>[39m
               [36m<b>[39m
-                [0mBasic Questions[0m
+                [36m<br />[39m
+                [0mExplore between thousands of career path wordlwide.[0m
+                [36m<br />[39m
               [36m</b>[39m
             [36m</h4>[39m
-            [36m<h5[39m
-              [33mclass[39m=[32m"w3-left-align"[39m
-            [36m>[39m
-              [0mA basic career test helps individuals explore potential career paths by assessing their interests, personality traits, and skills. It provides an overview of suitable career options based on the assessment results.[0m
-            [36m</h5>[39m
-            [36m<ul[39m
-              [33mclass[39m=[32m"w3-left-align"[39m
-            [36m>[39m
-              [36m<li>[39m
-                [0mPersonality Assessment: It may assess personality traits to help identify suitable work environments and roles.[0m
-              [36m</li>[39m
-              [36m<li>[39m
-                [0mSkills Assessment: Assesses skills to identify strengths and areas for development.[0m
-              [36m</li>[39m
-              [36m<li>[39m
-                [0mValues Assessment: Identifies personal values related to work preferences.[0m
-              [36m</li>[39m
-              [36m<li>[39m
-                [0mCareer Matches: Provides a list of potential career matches based on interests, personality, skills, and values.[0m
-              [36m</li>[39m
-              [36m<li>[39m
-                [0mCareer Information: Offers information about various careers, including job duties, requirements, salary, and outlook.[0m
-              [36m</li>[39m
-              [36m<li>[39m
-                [0mFeedback and Guidance: Provides feedback and guidance based on assessment results.[0m
-              [36m</li>[39m
-              [36m<li>[39m
-                [0mReport or Summary: Provides a report summarizing strengths, preferences, and suggested career paths.[0m
-              [36m</li>[39m
-              [36m<br />[39m
-            [36m</ul>[39m
-            [36m<h6>[39m
-              [36m<b>[39m
-                [0mThe Basic Assessment (2 minutes) is recommended for use when time is limited.[0m
-              [36m</b>[39m
-            [36m</h6>[39m
           [36m</div>[39m
           [36m<div[39m
             [33mclass[39m=[32m"w3-half"[39m
           [36m>[39m
-            [36m<h4[39m
-              [33mclass[39m=[32m"w3-xxxlarge w3-text-blue"[39m
-            [36m>[39m
-              [36m<b>[39m
-                [0mDetailed Questions[0m
-              [36m</b>[39m
-            [36m</h4>[39m
-            [36m<h5[39m
-              [33mclass[39m=[32m"w3-left-align"[39m
-            [36m>[39m
-              [0mA detailed career test offers a comprehensive assessment of an individual's interests, personality, values, and skills. It provides in-depth insights into various career paths, including job descriptions, educational requirements, and career development resources.[0m
-            [36m</h5>[39m
-            [36m<ul[39m
-              [33mclass[39m=[32m"w3-left-align"[39m
-            [36m>[39m
-              [36m<li>[39m
-                [0mAptitude Testing: Includes aptitude testing to identify specific abilities and strengths relevant to different career paths.[0m
-              [36m</li>[39m
-              [36m<li>[39m
-                [0mWork Environment Preferences: Tests preferences for work environments, such as team vs. independent work.[0m
-              [36m</li>[39m
-              [36m<li>[39m
-                [0mIndustry Matching: Provides specific recommendations for industries and job roles based on assessment results.[0m
-              [36m</li>[39m
-              [36m<li>[39m
-                [0mCareer Path Exploration: Offers extensive information about various career paths, including job descriptions and growth opportunities.[0m
-              [36m</li>[39m
-              [36m<li>[39m
-                [0mProfessional Development Resources: Provides resources for networking, resume writing, and skill development.[0m
-              [36m</li>[39m
-              [36m<li>[39m
-                [0mPersonalized Feedback: Offers personalized feedback and career recommendations based on assessment results.[0m
-              [36m</li>[39m
-            [36m</ul>[39m
-            [36m<h6>[39m
-              [36m<b>[39m
-                [0mThe Detailed Assessment (10 minutes) is recommended to get the best results.[0m
-              [36m</b>[39m
-            [36m</h6>[39m
+            [36m<img[39m
+              [33malt[39m=[32m""[39m
+              [33msrc[39m=[32m"engineering.jpeg"[39m
+              [33mstyle[39m=[32m"width: 100%; height: 250px; object-fit: cover;"[39m
+            [36m/>[39m
+            [36m<img[39m
+              [33malt[39m=[32m""[39m
+              [33msrc[39m=[32m"art.jpeg"[39m
+              [33mstyle[39m=[32m"width: 100%; height: 250px; object-fit: cover;"[39m
+            [36m/>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"w3-half"[39m
+          [36m>[39m
+            [36m<img[39m
+              [33malt[39m=[32m""[39m
+              [33msrc[39m=[32m"corporate.jpeg"[39m
+              [33mstyle[39m=[32m"width: 100%; height: 250px; object-fit: cover;"[39m
+            [36m/>[39m
+            [36m<img[39m
+              [33malt[39m=[32m""[39m
+              [33msrc[39m=[32m"medical.jpeg"[39m
+              [33mstyle[39m=[32m"width: 100%; height: 250px; object-fit: cover;"[39m
+            [36m/>[39m
           [36m</div>[39m
           [36m<div[39m
             [33mclass[39m=[32m"w3-container"[39m
@@ -259,6 +304,11 @@ FAIL src/App.test.tsx
                     [36m>[39m
                       [0mGroup Manager[0m
                     [36m</p>[39m
+                    [36m<p[39m
+                      [33mclass[39m=[32m"w3-opacity"[39m
+                    [36m>[39m
+                      [0mmasonkul@udel.edu[0m
+                    [36m</p>[39m
                   [36m</div>[39m
                 [36m</div>[39m
               [36m</div>[39m
@@ -278,6 +328,11 @@ FAIL src/App.test.tsx
                       [33mclass[39m=[32m"w3-opacity"[39m
                     [36m>[39m
                       [0mStudent[0m
+                    [36m</p>[39m
+                    [36m<p[39m
+                      [33mclass[39m=[32m"w3-opacity"[39m
+                    [36m>[39m
+                      [0msimpsong@udel.edu[0m
                     [36m</p>[39m
                   [36m</div>[39m
                 [36m</div>[39m
@@ -299,6 +354,11 @@ FAIL src/App.test.tsx
                     [36m>[39m
                       [0mStudent[0m
                     [36m</p>[39m
+                    [36m<p[39m
+                      [33mclass[39m=[32m"w3-opacity"[39m
+                    [36m>[39m
+                      [0mdhirp@udel.edu[0m
+                    [36m</p>[39m
                   [36m</div>[39m
                 [36m</div>[39m
               [36m</div>[39m
@@ -319,16 +379,20 @@ FAIL src/App.test.tsx
                     [36m>[39m
                       [0mStudent[0m
                     [36m</p>[39m
+                    [36m<p[39m
+                      [33mclass[39m=[32m"w3-opacity"[39m
+                    [36m>[39m
+                      [0msimeonsb@udel.edu[0m
+                    [36m</p>[39m
                   [36m</div>[39m
                 [36m</div>[39m
               [36m</div>[39m
               [36m<div[39m
                 [33mclass[39m=[32m"w3-container"[39m
-                [33mid[39m=[32m"contact"[39m
                 [33mmargin-top[39m=[32m"75px"[39m
               [36m>[39m
                 [36m<h4[39m
-                  [33mclass[39m=[32m"w3-xxxlarge w3-text-red"[39m
+                  [33mclass[39m=[32m"w3-xxxlarge w3-text-black"[39m
                 [36m>[39m
                   [36m<b>[39m
                     [0mContacts.[0m
@@ -340,56 +404,51 @@ FAIL src/App.test.tsx
                 [36m<p>[39m
                   [0mDo you questions or concerns about the assessments? Fill out the short form and fill us in with the details! We would be more than happy to assist![0m
                 [36m</p>[39m
-                [36m<form[39m
-                  [33maction[39m=[32m"/action_page.php"[39m
-                  [33mtarget[39m=[32m"_blank"[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"w3-section"[39m
                 [36m>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"w3-section"[39m
-                  [36m>[39m
-                    [36m<label>[39m
-                      [0mName[0m
-                    [36m</label>[39m
-                    [36m<input[39m
-                      [33mclass[39m=[32m"w3-input w3-border"[39m
-                      [33mname[39m=[32m"Name"[39m
-                      [33mrequired[39m=[32m""[39m
-                      [33mtype[39m=[32m"text"[39m
-                    [36m/>[39m
-                  [36m</div>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"w3-section"[39m
-                  [36m>[39m
-                    [36m<label>[39m
-                      [0mEmail[0m
-                    [36m</label>[39m
-                    [36m<input[39m
-                      [33mclass[39m=[32m"w3-input w3-border"[39m
-                      [33mname[39m=[32m"Email"[39m
-                      [33mrequired[39m=[32m""[39m
-                      [33mtype[39m=[32m"text"[39m
-                    [36m/>[39m
-                  [36m</div>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"w3-section"[39m
-                  [36m>[39m
-                    [36m<label>[39m
-                      [0mMessage[0m
-                    [36m</label>[39m
-                    [36m<input[39m
-                      [33mclass[39m=[32m"w3-input w3-border"[39m
-                      [33mname[39m=[32m"Message"[39m
-                      [33mrequired[39m=[32m""[39m
-                      [33mtype[39m=[32m"text"[39m
-                    [36m/>[39m
-                  [36m</div>[39m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"w3-button w3-block w3-padding-large w3-red w3-margin-bottom"[39m
-                    [33mtype[39m=[32m"submit"[39m
-                  [36m>[39m
-                    [0mSend Message[0m
-                  [36m</button>[39m
-                [36m</form>[39m
+                  [36m<label>[39m
+                    [0mName[0m
+                  [36m</label>[39m
+                  [36m<input[39m
+                    [33mclass[39m=[32m"w3-input w3-border"[39m
+                    [33mname[39m=[32m"Name"[39m
+                    [33mrequired[39m=[32m""[39m
+                    [33mtype[39m=[32m"text"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"w3-section"[39m
+                [36m>[39m
+                  [36m<label>[39m
+                    [0mEmail[0m
+                  [36m</label>[39m
+                  [36m<input[39m
+                    [33mclass[39m=[32m"w3-input w3-border"[39m
+                    [33mname[39m=[32m"Email"[39m
+                    [33mrequired[39m=[32m""[39m
+                    [33mtype[39m=[32m"text"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"w3-section"[39m
+                [36m>[39m
+                  [36m<label>[39m
+                    [0mMessage[0m
+                  [36m</label>[39m
+                  [36m<input[39m
+                    [33mclass[39m=[32m"w3-input w3-border"[39m
+                    [33mname[39m=[32m"Message"[39m
+                    [33mrequired[39m=[32m""[39m
+                    [33mtype[39m=[32m"text"[39m
+                  [36m/>[39m
+                [36m</div>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"w3-button w3-block w3-padding-large w3-black w3-margin-bottom"[39m
+                  [33mtype[39m=[32m"submit"[39m
+                [36m>[39m
+                  [0mSend Message[0m
+                [36m</button>[39m
               [36m</div>[39m
             [36m</div>[39m
           [36m</div>[39m
@@ -458,7 +517,7 @@ All files           |   13.41 |     9.37 |   13.79 |   13.58 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.146 s
+Time:        3.213 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
