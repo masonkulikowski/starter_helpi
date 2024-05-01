@@ -1,8 +1,14 @@
 import './home.css';
+import engineering from "./images/engineering.jpeg";
+import art from "./images/art.jpeg";
+import corporate from "./images/corporate.jpeg";
+import medical from "./images/medical.jpeg";
+
 
 function Home(){
 return(
   <>
+   <div className="w3-container">
     <h3 className="w3-jumbo" property='center'><b>Career Compass</b></h3>
     <h4 className='w3-container'>Empowering Your Professional Journey with short and fun career tests.</h4>
     <div className="w3-half">
@@ -33,6 +39,19 @@ return(
         </ul>
       <h6><b>The Detailed Assessment (10 minutes) is recommended to get the best results.</b></h6>
     </div>
+    </div>
+    <div className="w3-container">
+      <h4 className="w3-xxxlarge w3-text-blue"><b><br></br>Explore between thousands of career path wordlwide.<br></br></b></h4>
+    </div>
+  <div className="w3-half">
+  <img src={engineering} style={{ width: "100%", height: "250px", objectFit: "cover" }} alt="" />
+  <img src={art} style={{ width: "100%", height: "250px", objectFit: "cover" }} alt="" />
+</div>
+<div className="w3-half">
+  <img src={corporate} style={{ width: "100%", height: "250px", objectFit: "cover" }} alt="" />
+  <img src={medical} style={{ width: "100%", height: "250px", objectFit: "cover" }} alt="" />
+</div>
+    
     <div className="w3-container">
       <h4 className="w3-xxxlarge w3-text-blue"><b><br></br>Comparison of assessmnets<br></br></b></h4>
     </div>
@@ -47,7 +66,6 @@ return(
           <li className="w3-padding-16">Quality of assessment: Moderate</li>
         </ul>
       </div>
-
 
      
 
@@ -68,6 +86,7 @@ return(
         <div className="w3-container">
           <h3>Mason Kulikowski</h3>
           <p className="w3-opacity">Group Manager</p>
+          <p className="w3-opacity">masonkul@udel.edu</p>
         </div>
       </div>
     </div>
@@ -76,6 +95,7 @@ return(
         <div className="w3-container">
           <h3> Gabriel Simpson</h3>
           <p className="w3-opacity">Student</p>
+          <p className="w3-opacity">simpsong@udel.edu</p>
         </div>
       </div>
     </div>
@@ -84,6 +104,7 @@ return(
         <div className="w3-container">
           <h3>Dhir Patel</h3>
           <p className="w3-opacity">Student</p>
+          <p className="w3-opacity">dhirp@udel.edu</p>
         </div>
       </div>
     </div>
@@ -92,14 +113,14 @@ return(
         <div className="w3-container">
           <h3> Simeon Sabev</h3>
           <p className="w3-opacity">Student</p>
+          <p className="w3-opacity">simeonsb@udel.edu</p>
         </div>
       </div>
     </div>
-    <div className="w3-container" id="contact" margin-top="75px">
-    <h4 className="w3-xxxlarge w3-text-red"><b>Contacts.</b></h4>
+    <div className="w3-container" margin-top="75px">
+    <h4 className="w3-xxxlarge w3-text-black"><b>Contacts.</b></h4>
     <hr  className="w3-round"></hr>
     <p>Do you questions or concerns about the assessments? Fill out the short form and fill us in with the details! We would be more than happy to assist!</p>
-    <form action="/action_page.php" target="_blank">
       <div className="w3-section">
         <label>Name</label>
         <input className="w3-input w3-border" type="text" name="Name" required></input>
@@ -112,27 +133,11 @@ return(
         <label>Message</label>
         <input className="w3-input w3-border" type="text" name="Message" required></input>
       </div>
-      <button type="submit" className="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
-    </form>  
+      <button type="submit" className="w3-button w3-block w3-padding-large w3-black w3-margin-bottom">Send Message</button>
   </div>
   </div>
   </div>
     </>
 );
 }
-/*<div className="w3-half">
- <img src="engineering.jpeg" width="100%" alt=""></img>
-      <img src="engineering.jpeg" width="100%" alt=></img>
-      <img src="engineering.jpeg" width="100%" alt=></img>
-      <img src="images/engineering.jpeg" width="100%"  alt=""></img>
-    </div>
-
-    <div className="w3-half">
-    <img src="engineering.jpeg" width="100%" alt=""></img>
-      <img src="engineering.jpeg" width="100%" alt=""></img>
-      <img src="/engineering.jpeg" width="100%"  alt=""></img>
-    </div>
-    <div className="w3-container">
-      <h4 className="w3-xxxlarge w3-text-blue"><b><br></br>Inserting images in here<br></br></b></h4>
-    </div>*/
 export default Home;
