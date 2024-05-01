@@ -12,7 +12,6 @@ function Results(){
         setEmail(event.target.value);
     };
     function send() {
-        
     }
 
     return(
@@ -37,6 +36,7 @@ function Results(){
                     cols={20}
                     onChange={updateEmail}
                     /><br />
+                    <p>{email}</p>
                     <button type="button" onClick={() => send} className='Detailed-button'>Send Email</button>
                 </div>
             </header>
