@@ -23,19 +23,12 @@ export async function responseDetailed(answer: string[]){
 }
 
 
-export async function ressponseBasic(answer: string[]){
-    const question = [
-        'How do you prefer to work?',
-        'What motivates you in your work?',
-        'What are your primary career goals?',
-        'What are your key strengths and skills?',
-        'What are your key values in the workplace?',
-        'How do you handle challenges and setbacks?',
-        'Where do you see yourself in 5-10 years?'
-      ];
+
+export async function responseBasic(answer: { question: string, answer: string }[]){
+
     const completion = await openai.chat.completions.create({
         messages:[{role: "system", content: "You are a Career Advisor"},
-        {role: "user", content:'Based on these answer:' +answer + ' to these questoins' + question + ". Suggest a Career best fited for the user. keep your answer short and simple "}],
+        {role: "user", content:'Based on these answer:' +answer + ". Suggest a Career best fited for the user. keep your answer short and simple "}],
         model: "gpt-3.5-turbo",
         temperature:.5, 
     });

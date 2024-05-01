@@ -1,9 +1,16 @@
 import { Link, useLocation } from 'react-router-dom';
 import './App.css';
+//import { responseBasic } from './ChatGPT';
 
 function Results(){
     const location = useLocation();
     const responses = (location.state as { responses: { question: string, answer: string }[] }).responses;
+    console.log(responses);
+    //const generatedResponse = responseBasic(responses);
+  
+   // console.log(generatedResponse);
+
+
     return(
         <div className='App'>
             <header className="App-header">
