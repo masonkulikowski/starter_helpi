@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
 import { useNavigate } from 'react-router-dom';
-import { responseDetailed } from './ChatGPT';
-
-const globalResponses: string[] = [];
-
 
 interface Responses {
     question1: string;
@@ -19,7 +15,7 @@ interface Responses {
 
 function DetailedQuestion() {
     // States for all detailed questions responses
-    const [responses, setResponses] = useState<Responses>({
+    const [response, setResponse] = useState<Responses>({
         question1: '',
         question2: '',
         question3: '',
@@ -42,9 +38,11 @@ function DetailedQuestion() {
         { label: "You have completed all questions!", name: "done"}
     ];
 
+    const [responses, setResponses] = useState<{ question: string, answer: string }[]>([]);
+
     const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         const { name, value } = e.target;
-        setResponses(prevResponses => ({
+        setResponse(prevResponses => ({
             ...prevResponses,
             [name]: value,
         }));
@@ -52,10 +50,11 @@ function DetailedQuestion() {
 
     const submitAssessment = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log('User Responses: ', responses);
+        console.log('User Responses: ', response);
     };
 
     const handleNavigation = (direction: 'next' | 'prev') => {
+        setResponses([...responses, { question: questions[currentQuestionIndex].label, answer: response[questions[currentQuestionIndex].name] }]);
         setCurrentQuestionIndex(prevIndex => 
             direction === 'next' ? Math.min(questions.length - 1, prevIndex + 1) : Math.max(0, prevIndex - 1)
         );
@@ -64,11 +63,7 @@ function DetailedQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
 
     const storeResponsesAndNavigate = () => {
-        const holder = JSON.stringify(responses);
-        globalResponses.push(holder);
-        console.log('Global Responses: ', globalResponses);
-        responseDetailed(globalResponses);
-        navigate("/result");
+        navigate("/result", { state: { responses } });
     };
 
 
@@ -87,7 +82,7 @@ function DetailedQuestion() {
                                     name={currentQuestion.name}
                                     rows={4}
                                     cols={60}
-                                    value={responses[currentQuestion.name]}
+                                    value={response[currentQuestion.name]}
                                     onChange={handleChange} /></>
                              )}
                              {currentQuestionIndex === questions.length -1 &&(
