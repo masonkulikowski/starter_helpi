@@ -61,7 +61,7 @@ function Basic_Question() {
             {!showResults && (
               <ol type="A" style={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch', justifyContent: 'flex-end', width: '80%' }}>
                 {answers[currentQuestion].map((answer, index) => (
-                  <div key={index} style={{ marginBottom: '10px', flex: 1 }}>
+                  <div key={index} style={{ marginLeft:'100px', marginBottom: '10px', flex: 1 }}>
                     <button className="button" onClick={() => handleAnswerSelect(answer)} style={{ width: '100%', backgroundColor: '#007bff', color: '#fff', borderRadius: '5px', padding: '10px', fontSize: '16px', fontWeight: 'bold', border: 'none', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer' }}>{String.fromCharCode(65 + index)}. {answer}</button>
                   </div>
                 ))}
