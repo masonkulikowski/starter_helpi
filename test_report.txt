@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (77 ms)
+  ✕ renders learn react link (78 ms)
 
   ● renders learn react link
 
@@ -398,70 +398,20 @@ FAIL src/App.test.tsx
                   [36m</div>[39m
                 [36m</div>[39m
               [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"w3-container"[39m
-                [33mmargin-top[39m=[32m"75px"[39m
-              [36m>[39m
-                [36m<h4[39m
-                  [33mclass[39m=[32m"w3-xxxlarge w3-text-black"[39m
-                [36m>[39m
-                  [36m<b>[39m
-                    [0mContacts.[0m
-                  [36m</b>[39m
-                [36m</h4>[39m
-                [36m<hr[39m
-                  [33mclass[39m=[32m"w3-round"[39m
-                [36m/>[39m
-                [36m<p>[39m
-                  [0mDo you questions or concerns about the assessments? Fill out the short form and fill us in with the details! We would be more than happy to assist![0m
-                [36m</p>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"w3-section"[39m
-                [36m>[39m
-                  [36m<label>[39m
-                    [0mName[0m
-                  [36m</label>[39m
-                  [36m<input[39m
-                    [33mclass[39m=[32m"w3-input w3-border"[39m
-                    [33mname[39m=[32m"Name"[39m
-                    [33mrequired[39m=[32m""[39m
-                    [33mtype[39m=[32m"text"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"w3-section"[39m
-                [36m>[39m
-                  [36m<label>[39m
-                    [0mEmail[0m
-                  [36m</label>[39m
-                  [36m<input[39m
-                    [33mclass[39m=[32m"w3-input w3-border"[39m
-                    [33mname[39m=[32m"Email"[39m
-                    [33mrequired[39m=[32m""[39m
-                    [33mtype[39m=[32m"text"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"w3-section"[39m
-                [36m>[39m
-                  [36m<label>[39m
-                    [0mMessage[0m
-                  [36m</label>[39m
-                  [36m<input[39m
-                    [33mclass[39m=[32m"w3-input w3-border"[39m
-                    [33mname[39m=[32m"Message"[39m
-                    [33mrequired[39m=[32m""[39m
-                    [33mtype[39m=[32m"text"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"w3-button w3-block w3-padding-large w3-black w3-margin-bottom"[39m
-                  [33mtype[39m=[32m"submit"[39m
-                [36m>[39m
-                  [0mSend Message[0m
-                [36m</button>[39m
-              [36m</div>[39m
             [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"w3-container"[39m
+          [36m>[39m
+            [36m<h4[39m
+              [33mclass[39m=[32m"w3-xxxlarge w3-text-blue"[39m
+            [36m>[39m
+              [36m<b>[39m
+                [0m Your career is a journey, not a destination.[0m
+                [36m<br />[39m
+              [36m</b>[39m
+            [36m</h4>[39m
+            [36m<br />[39m
           [36m</div>[39m
           [36m<div[39m
             [33mclass[39m=[32m"App"[39m
@@ -528,7 +478,7 @@ All files           |   11.23 |     8.82 |   12.12 |   11.49 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.234 s
+Time:        3.286 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
