@@ -53,7 +53,7 @@ return(
 </div>
     
     <div className="w3-container">
-      <h4 className="w3-xxxlarge w3-text-blue"><b><br></br>Comparison of assessmnets<br></br></b></h4>
+      <h4 className="w3-xxxlarge w3-text-blue"><b><br></br>Comparison of Assessments<br></br></b></h4>
     </div>
     <br></br><div className="w3-row-padding">
       <div className="w3-half w3-margin-bottom">
