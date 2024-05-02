@@ -19,20 +19,26 @@ export async function responseDetailed(answer: string[]){
     });
     const result = completion.choices[0];
     console.log(completion.choices[0]);
+    console.log("THIS IS FROM DETAILED");
+
     return(result);
 }
 
 
 
 export async function responseBasic(answer: { question: string, answer: string }[]){
+    const formattedAnswers = answer.map(ans => `${ans.question}: ${ans.answer}`).join(", ");
+
+    const prompt = `Based on these answers: ${formattedAnswers}. Suggest a career best suited for the user. Keep your answer short and simple.`;
+
 
     const completion = await openai.chat.completions.create({
         messages:[{role: "system", content: "You are a Career Advisor"},
-        {role: "user", content:'Based on these answer:' +answer + ". Suggest a Career best fited for the user. keep your answer short and simple "}],
+        {role: "user", content:prompt}],
         model: "gpt-3.5-turbo",
         temperature:.5, 
     });
-    const result = completion.choices[0];
-    console.log(completion.choices[0]);
+    const result = completion.choices[0].message.content;
+    console.log("THIS IS FROM BAISC");
     return(result);
 }
