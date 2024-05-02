@@ -3,22 +3,29 @@ import { Link, useLocation } from 'react-router-dom';
 import './App.css';
 import { responseBasic } from './ChatGPT';
 
+
 function Results(){
     const location = useLocation();
     const responses = (location.state as { responses: { question: string, answer: string }[] }).responses;
 
-    // State to store the generated response
     const [generatedResponse, setGeneratedResponse] = useState<string | null>('');
-    // Use useEffect to call responseBasic only on component mount
     useEffect(() => {
-        const fetchResponse = async () => {
+        const getResponse = async () => {
             const result = await responseBasic(responses);
             setGeneratedResponse(result);
-            console.log(result); // Optionally log the result here
+            console.log(result); 
         };
 
-        fetchResponse();
-    }, [responses]); // Empty dependency array means this effect runs only once after the initial render
+        getResponse();
+    }, [responses]);
+
+    const[email, setEmail] = useState<string>("");
+
+    function updateEmail(event: React.ChangeEvent<HTMLTextAreaElement>) {
+        setEmail(event.target.value);
+    };
+    function send() {
+    }
 
     return(
         <div className='App'>
@@ -41,6 +48,15 @@ function Results(){
                     <Link to="/Home" className="container" style={{ textAlign:'center', padding: '10px 20px', backgroundColor: '#dc3545', color: '#fff', borderRadius: '5px', textDecoration: 'none', fontSize: '16px', fontWeight: 'bold', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer'}}>
                         Back to Home
                     </Link>
+                </div>
+                <div>
+                    <textarea
+                    rows={2}
+                    cols={20}
+                    onChange={updateEmail}
+                    /><br />
+                    <p>{email}</p>
+                    <button type="button" onClick={() => send} className='Detailed-button'>Send Email</button>
                 </div>
             </header>
         </div>
