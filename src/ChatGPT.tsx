@@ -3,33 +3,11 @@ import OpenAI from "openai";
 const openai = new OpenAI({apiKey: JSON.parse(localStorage.getItem("MYKEY") || '""'), dangerouslyAllowBrowser: true});
 
 
-export async function responseDetailed(answer: string[]){
-    const question = ["1. What careers seem interesting to you? Why?",
-    "2. What are your current skills? (Hard Skills and Soft Skills)",
-    "3. What is your highest level of education or training?",
-    "4. What is your ideal Work-life balance?",
-    "5. What are you willing to give up for better career opportunities?",
-    "6. How important is money?",
-    "7. What impact do you want to make on the world?"];
-    const completion = await openai.chat.completions.create({
-        messages:[{role: "system", content: "You are a Career Advisor"},
-        {role: "user", content:'Based on these answer:' +answer + ' to these questoins' + question + ". Suggest a Career best fited for the user. keep your answer short and simple "}],
-        model: "gpt-3.5-turbo",
-        temperature:.5, 
-    });
-    const result = completion.choices[0];
-    console.log(completion.choices[0]);
-    console.log("THIS IS FROM DETAILED");
-
-    return(result);
-}
-
-
 
 export async function responseBasic(answer: { question: string, answer: string }[]){
     const formattedAnswers = answer.map(ans => `${ans.question}: ${ans.answer}`).join(", ");
 
-    const prompt = `Based on these answers: ${formattedAnswers}. Suggest a career best suited for the user. Keep your answer short and simple.`;
+    const prompt = `Based on these answers: ${formattedAnswers}. Suggest 3 career best suited for the user. Keep your answer short and simple. and lable them from 1) to 3) and give a short and simple explainion.`;
 
 
     const completion = await openai.chat.completions.create({
@@ -39,6 +17,6 @@ export async function responseBasic(answer: { question: string, answer: string }
         temperature:.5, 
     });
     const result = completion.choices[0].message.content;
-    console.log("THIS IS FROM BAISC");
+    console.log(completion)
     return(result);
 }
