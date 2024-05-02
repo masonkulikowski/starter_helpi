@@ -27,6 +27,8 @@ function Results(){
     function send() {
     }
 
+    
+
     return(
         <div className='App'>
             <header className="App-header">
@@ -41,7 +43,9 @@ function Results(){
                       {generatedResponse && (
                         <div>
                           <h2>AI Suggestion:</h2>
-                          <p>{generatedResponse}</p>
+                          {generatedResponse.split(".").map((sentence, index) => (
+    <p key={index}>{sentence}.</p>
+))}
                         </div>
                       )}
                     </div>
