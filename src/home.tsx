@@ -117,26 +117,13 @@ return(
         </div>
       </div>
     </div>
-    <div className="w3-container" margin-top="75px">
-    <h4 className="w3-xxxlarge w3-text-black"><b>Contacts.</b></h4>
-    <hr  className="w3-round"></hr>
-    <p>Do you questions or concerns about the assessments? Fill out the short form and fill us in with the details! We would be more than happy to assist!</p>
-      <div className="w3-section">
-        <label>Name</label>
-        <input className="w3-input w3-border" type="text" name="Name" required></input>
-      </div>
-      <div className="w3-section">
-        <label>Email</label>
-        <input className="w3-input w3-border" type="text" name="Email" required></input>
-      </div>
-      <div className="w3-section">
-        <label>Message</label>
-        <input className="w3-input w3-border" type="text" name="Message" required></input>
-      </div>
-      <button type="submit" className="w3-button w3-block w3-padding-large w3-black w3-margin-bottom">Send Message</button>
+    
   </div>
   </div>
-  </div>
+  <div className="w3-container">
+    <h4 className="w3-xxxlarge w3-text-blue"><b> Your career is a journey, not a destination.<br></br></b></h4>
+    <br></br>
+    </div>
     </>
 );
 }
