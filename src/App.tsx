@@ -7,6 +7,7 @@ import Basic_Question from './basic';
 import Home from './home';
 import TopH from "./Top";
 import Results from "./result";
+import { Navigate } from "react-router-dom";
 
 
 
@@ -16,7 +17,7 @@ function App(): JSX.Element {
       <div className='App'>
         <TopH />
         <Routes>
-        <Route index element={<Home />} />
+           <Route index element={<Navigate to="/home" />} />
            <Route path="/home" Component={Home} />
            <Route path="/basic" Component={Basic_Question} />
            <Route path="/detailed" Component={Detailed_Question} />
