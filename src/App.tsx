@@ -22,7 +22,6 @@ function App(): JSX.Element {
            <Route path="/detailed" Component={Detailed_Question} />
            <Route path="/result" Component={Results} />
         </Routes>
-        <Home />
         <APIsuff />
       </div>
     </Router>
