@@ -17,7 +17,6 @@ function App(): JSX.Element {
         <TopH />
         <Routes>
           <Route path="/" element={<Navigate to="/home" replace />} />
-          {/* Specific routes */}
           <Route path="/home" element={<Home />} />
           <Route path="/basic" element={<BasicQuestion />} />
           <Route path="/detailed" element={<DetailedQuestion />} />
