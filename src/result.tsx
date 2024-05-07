@@ -33,18 +33,17 @@ function Results(){
         <div className='App'>
             <header className="App-header">
                 <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                    <h1>Result Page</h1>
-                    <p style={{position: 'absolute', top: '20%', textAlign: 'center'}}>Your result will be shown here:</p>
+                    <h1 style={{textAlign: 'center', top: 0, fontWeight: 'bold', fontSize: '2em'}}>Results</h1>
                     <div>
-                      <h2>Your Responses:</h2>
+                      <h2 style={{textAlign: 'center', marginTop: '50px'}}>Your Responses:</h2>
                       {responses.map((response, index) => (
                         <p key={index}>{response.question}: {response.answer}</p>
                       ))}
                       {generatedResponse && (
                         <div>
-                          <h2>AI Suggestion:</h2>
+                          <h2 style={{textAlign: 'center'}}>AI Suggestion:</h2>
                           {generatedResponse.split(".").map((sentence, index) => (
-    <p key={index}>{sentence}.</p>
+    <p key={index}>{sentence}</p>
 ))}
                         </div>
                       )}
