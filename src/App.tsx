@@ -4,7 +4,6 @@ import './App.css';
 import APIsuff from "./API";
 import Detailed_Question from "./detailed";
 import Basic_Question from './basic';
-import Home from './home';
 import TopH from "./Top";
 import Results from "./result";
 import { Navigate } from "react-router-dom";
@@ -17,8 +16,7 @@ function App(): JSX.Element {
       <div className='App'>
         <TopH />
         <Routes>
-          <Route path="/" element={<Navigate replace to="/home" />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/masonkulikowski.github.io/home" element={<Navigate replace to="./home" />} />
           <Route path="/basic" Component={Basic_Question } />
           <Route path="/detailed" Component={Detailed_Question } />
           <Route path="/result" element={<Results />} />
