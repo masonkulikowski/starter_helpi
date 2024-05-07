@@ -1,13 +1,12 @@
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import './App.css';
 import APIsuff from "./API";
 import Detailed_Question from "./detailed";
 import Basic_Question from './basic';
-import Home from './home';
 import TopH from "./Top";
 import Results from "./result";
-import { Navigate } from "react-router-dom";
+import Home from "./home";
 
 
 
@@ -17,7 +16,7 @@ function App(): JSX.Element {
       <div className='App'>
         <TopH />
         <Routes>
-           <Route index element={<Navigate to="/home" />} />
+        <Route index element={<Navigate to="/home" />} />
            <Route path="/home" Component={Home} />
            <Route path="/basic" Component={Basic_Question} />
            <Route path="/detailed" Component={Detailed_Question} />
@@ -26,8 +25,6 @@ function App(): JSX.Element {
         <APIsuff />
       </div>
     </Router>
-  
-  
   );
   }
 
