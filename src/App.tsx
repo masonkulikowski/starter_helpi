@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import './App.css';
 import APIsuff from "./API";
 import Detailed_Question from "./detailed";
@@ -16,7 +16,7 @@ function App(): JSX.Element {
       <div className='App'>
         <TopH />
         <Routes>
-        <Route index element={<Home />} />
+        <Route index element={<Navigate to="/home" />} />
            <Route path="/home" Component={Home} />
            <Route path="/basic" Component={Basic_Question} />
            <Route path="/detailed" Component={Detailed_Question} />
