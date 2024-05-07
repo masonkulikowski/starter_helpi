@@ -17,10 +17,12 @@ function App(): JSX.Element {
         <TopH />
         <Routes>
           <Route path="/" element={<Navigate to="/home" replace />} />
+          {/* Specific routes */}
           <Route path="/home" element={<Home />} />
           <Route path="/basic" element={<BasicQuestion />} />
           <Route path="/detailed" element={<DetailedQuestion />} />
           <Route path="/result" element={<Results />} />
+          <Route path="*" element={<Navigate to="/home" replace />} />
         </Routes>
         <APIsuff />
       </div>
@@ -28,6 +30,6 @@ function App(): JSX.Element {
   
   
   );
-  }
+}
 
 export default App;
