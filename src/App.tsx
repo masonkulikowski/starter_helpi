@@ -16,7 +16,7 @@ function App(): JSX.Element {
       <div className='App'>
         <TopH />
         <Routes>
-          <Route path="/masonkulikowski.github.io/home" element={<Navigate replace to="./home" />} />
+          <Route path="/masonkulikowski.github.io/starter_helpi/" element={<Navigate replace to="./home" />} />
           <Route path="/basic" Component={Basic_Question } />
           <Route path="/detailed" Component={Detailed_Question } />
           <Route path="/result" element={<Results />} />
