@@ -6,7 +6,7 @@ import Detailed_Question from "./detailed";
 import Basic_Question from './basic';
 import TopH from "./Top";
 import Results from "./result";
-import { Navigate } from "react-router-dom";
+import Home from "./home";
 
 
 
@@ -16,11 +16,13 @@ function App(): JSX.Element {
       <div className='App'>
         <TopH />
         <Routes>
-          <Route path="/masonkulikowski.github.io/starter_helpi/" element={<Navigate replace to="./home" />} />
-          <Route path="/basic" Component={Basic_Question } />
-          <Route path="/detailed" Component={Detailed_Question } />
-          <Route path="/result" element={<Results />} />
+        <Route index element={<Home />} />
+           <Route path="/home" Component={Home} />
+           <Route path="/basic" Component={Basic_Question} />
+           <Route path="/detailed" Component={Detailed_Question} />
+           <Route path="/result" Component={Results} />
         </Routes>
+        <Home />
         <APIsuff />
       </div>
     </Router>
