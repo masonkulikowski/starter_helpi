@@ -2,29 +2,31 @@
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import './App.css';
 import APIsuff from "./API";
-import Detailed_Question from "./detailed";
-import Basic_Question from './basic';
+import DetailedQuestion from "./detailed";
+import BasicQuestion from './basic';
+import Home from './home';
 import TopH from "./Top";
 import Results from "./result";
-import Home from "./home";
 
 
 
 function App(): JSX.Element {
   return (
-    <Router>
+<Router>
       <div className='App'>
         <TopH />
         <Routes>
-        <Route index element={<Navigate to="/home" />} />
-           <Route path="/home" Component={Home} />
-           <Route path="/basic" Component={Basic_Question} />
-           <Route path="/detailed" Component={Detailed_Question} />
-           <Route path="/result" Component={Results} />
+          <Route path="/" element={<Navigate to="/home" replace />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/basic" element={<BasicQuestion />} />
+          <Route path="/detailed" element={<DetailedQuestion />} />
+          <Route path="/result" element={<Results />} />
         </Routes>
         <APIsuff />
       </div>
     </Router>
+  
+  
   );
   }
 
