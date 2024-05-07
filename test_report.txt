@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (104 ms)
+  ✕ renders learn react link (80 ms)
 
   ● renders learn react link
 
@@ -178,7 +178,269 @@ FAIL src/App.test.tsx
             [33mclass[39m=[32m"w3-half"[39m
           [36m>[39m
             [36m<img[39m
-      ...
+              [33malt[39m=[32m""[39m
+              [33msrc[39m=[32m"engineering.jpeg"[39m
+              [33mstyle[39m=[32m"width: 100%; height: 250px; object-fit: cover;"[39m
+            [36m/>[39m
+            [36m<img[39m
+              [33malt[39m=[32m""[39m
+              [33msrc[39m=[32m"art.jpeg"[39m
+              [33mstyle[39m=[32m"width: 100%; height: 250px; object-fit: cover;"[39m
+            [36m/>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"w3-half"[39m
+          [36m>[39m
+            [36m<img[39m
+              [33malt[39m=[32m""[39m
+              [33msrc[39m=[32m"corporate.jpeg"[39m
+              [33mstyle[39m=[32m"width: 100%; height: 250px; object-fit: cover;"[39m
+            [36m/>[39m
+            [36m<img[39m
+              [33malt[39m=[32m""[39m
+              [33msrc[39m=[32m"medical.jpeg"[39m
+              [33mstyle[39m=[32m"width: 100%; height: 250px; object-fit: cover;"[39m
+            [36m/>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"w3-container"[39m
+          [36m>[39m
+            [36m<h4[39m
+              [33mclass[39m=[32m"w3-xxxlarge w3-text-blue"[39m
+            [36m>[39m
+              [36m<b>[39m
+                [36m<br />[39m
+                [0mComparison of Assessments[0m
+                [36m<br />[39m
+              [36m</b>[39m
+            [36m</h4>[39m
+          [36m</div>[39m
+          [36m<br />[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"w3-row-padding"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"w3-half w3-margin-bottom"[39m
+            [36m>[39m
+              [36m<ul[39m
+                [33mclass[39m=[32m"w3-ul w3-light-grey w3-center"[39m
+              [36m>[39m
+                [36m<li[39m
+                  [33mclass[39m=[32m"w3-light-blue w3-xlarge w3-padding-32 "[39m
+                [36m>[39m
+                  [0mBasic Questions[0m
+                [36m</li>[39m
+                [36m<li[39m
+                  [33mclass[39m=[32m"w3-padding-16"[39m
+                [36m>[39m
+                  [0mPurpose: Broadly assess interests and preferences.[0m
+                [36m</li>[39m
+                [36m<li[39m
+                  [33mclass[39m=[32m"w3-padding-16"[39m
+                [36m>[39m
+                  [0mFocus: General career interests and preferences.[0m
+                [36m</li>[39m
+                [36m<li[39m
+                  [33mclass[39m=[32m"w3-padding-16"[39m
+                [36m>[39m
+                  [0mNumber of questions: 7[0m
+                [36m</li>[39m
+                [36m<li[39m
+                  [33mclass[39m=[32m"w3-padding-16"[39m
+                [36m>[39m
+                  [0mStructure: Multiple-choice - structured questions with predefined answers.[0m
+                [36m</li>[39m
+                [36m<li[39m
+                  [33mclass[39m=[32m"w3-padding-16"[39m
+                [36m>[39m
+                  [0mQuality of assessment: Moderate[0m
+                [36m</li>[39m
+              [36m</ul>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"w3-half "[39m
+            [36m>[39m
+              [36m<ul[39m
+                [33mclass[39m=[32m"w3-ul w3-light-grey w3-center"[39m
+              [36m>[39m
+                [36m<li[39m
+                  [33mclass[39m=[32m"w3-blue w3-xlarge w3-padding-32"[39m
+                [36m>[39m
+                  [0mDetalied Questions[0m
+                [36m</li>[39m
+                [36m<li[39m
+                  [33mclass[39m=[32m"w3-padding-16"[39m
+                [36m>[39m
+                  [0mPurpose: Explore specific career-related scenarios.[0m
+                [36m</li>[39m
+                [36m<li[39m
+                  [33mclass[39m=[32m"w3-padding-16"[39m
+                [36m>[39m
+                  [0mFocus: Specific career situations and challenges.[0m
+                [36m</li>[39m
+                [36m<li[39m
+                  [33mclass[39m=[32m"w3-padding-16"[39m
+                [36m>[39m
+                  [0mNumber of questions: 7[0m
+                [36m</li>[39m
+                [36m<li[39m
+                  [33mclass[39m=[32m"w3-padding-16"[39m
+                [36m>[39m
+                  [0mStructure: Open-ended questions - questions requiring elaboration.[0m
+                [36m</li>[39m
+                [36m<li[39m
+                  [33mclass[39m=[32m"w3-padding-16"[39m
+                [36m>[39m
+                  [0mQuality of assessment: Excellent[0m
+                [36m</li>[39m
+              [36m</ul>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"w3-row-padding w3-grayscale"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"w3-col m3 w3-margin-bottom"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"w3-light-grey"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"w3-container"[39m
+                  [36m>[39m
+                    [36m<h3>[39m
+                      [0mMason Kulikowski[0m
+                    [36m</h3>[39m
+                    [36m<p[39m
+                      [33mclass[39m=[32m"w3-opacity"[39m
+                    [36m>[39m
+                      [0mGroup Manager[0m
+                    [36m</p>[39m
+                    [36m<p[39m
+                      [33mclass[39m=[32m"w3-opacity"[39m
+                    [36m>[39m
+                      [0mmasonkul@udel.edu[0m
+                    [36m</p>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"w3-col m3 w3-margin-bottom"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"w3-light-grey"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"w3-container"[39m
+                  [36m>[39m
+                    [36m<h3>[39m
+                      [0m Gabriel Simpson[0m
+                    [36m</h3>[39m
+                    [36m<p[39m
+                      [33mclass[39m=[32m"w3-opacity"[39m
+                    [36m>[39m
+                      [0mStudent[0m
+                    [36m</p>[39m
+                    [36m<p[39m
+                      [33mclass[39m=[32m"w3-opacity"[39m
+                    [36m>[39m
+                      [0msimpsong@udel.edu[0m
+                    [36m</p>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"w3-col m3 w3-margin-bottom"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"w3-light-grey"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"w3-container"[39m
+                  [36m>[39m
+                    [36m<h3>[39m
+                      [0mDhir Patel[0m
+                    [36m</h3>[39m
+                    [36m<p[39m
+                      [33mclass[39m=[32m"w3-opacity"[39m
+                    [36m>[39m
+                      [0mStudent[0m
+                    [36m</p>[39m
+                    [36m<p[39m
+                      [33mclass[39m=[32m"w3-opacity"[39m
+                    [36m>[39m
+                      [0mdhirp@udel.edu[0m
+                    [36m</p>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"w3-col m3 w3-margin-bottom"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"w3-light-grey"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"w3-container"[39m
+                  [36m>[39m
+                    [36m<h3>[39m
+                      [0m Simeon Sabev[0m
+                    [36m</h3>[39m
+                    [36m<p[39m
+                      [33mclass[39m=[32m"w3-opacity"[39m
+                    [36m>[39m
+                      [0mStudent[0m
+                    [36m</p>[39m
+                    [36m<p[39m
+                      [33mclass[39m=[32m"w3-opacity"[39m
+                    [36m>[39m
+                      [0msimeonsb@udel.edu[0m
+                    [36m</p>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"w3-container"[39m
+          [36m>[39m
+            [36m<h4[39m
+              [33mclass[39m=[32m"w3-xxxlarge w3-text-blue"[39m
+            [36m>[39m
+              [36m<b>[39m
+                [0m Your career is a journey, not a destination.[0m
+                [36m<br />[39m
+              [36m</b>[39m
+            [36m</h4>[39m
+            [36m<br />[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"App"[39m
+          [36m>[39m
+            [36m<form[39m
+              [33mclass[39m=[32m""[39m
+            [36m>[39m
+              [36m<label[39m
+                [33mclass[39m=[32m"form-label"[39m
+              [36m>[39m
+                [0mAPI Key:[0m
+              [36m</label>[39m
+              [36m<input[39m
+                [33mclass[39m=[32m"form-control"[39m
+                [33mplaceholder[39m=[32m"Insert API Key Here"[39m
+                [33mtype[39m=[32m"password"[39m
+              [36m/>[39m
+              [36m<br />[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"Submit-Button btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mSubmit[0m
+              [36m</button>[39m
+            [36m</form>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
 
        5 | test('renders learn react link', () => {
        6 |   render(<App />);
@@ -216,7 +478,7 @@ All files           |   11.23 |     8.82 |   12.12 |   11.49 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.326 s
+Time:        3.178 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
