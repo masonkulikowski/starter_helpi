@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './App.css';
-import { responseBasic } from './ChatGPT';
+import { GptResponse } from './ChatGPT';
 
 
 function Results(){
@@ -11,7 +11,7 @@ function Results(){
     const [generatedResponse, setGeneratedResponse] = useState<string | null>('');
     useEffect(() => {
         const getResponse = async () => {
-            const result = await responseBasic(responses);
+            const result = await GptResponse(responses);
             setGeneratedResponse(result);
             console.log(result); 
         };
@@ -44,8 +44,8 @@ function Results(){
                         <div>
                           <h2>AI Suggestion:</h2>
                           {generatedResponse.split(".").map((sentence, index) => (
-    <p key={index}>{sentence}.</p>
-))}
+                          <p key={index}>{sentence}.</p>
+                          ))}
                         </div>
                       )}
                     </div>
