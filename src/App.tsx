@@ -17,17 +17,15 @@ function App(): JSX.Element {
       <div className='App'>
         <TopH />
         <Routes>
-           <Route index element={<Navigate to="/home" />} />
-           <Route path="/home" Component={Home} />
-           <Route path="/basic" Component={Basic_Question} />
-           <Route path="/detailed" Component={Detailed_Question} />
-           <Route path="/result" Component={Results} />
+          <Route path="/" element={<Navigate replace to="/home" />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/basic" Component={Basic_Question } />
+          <Route path="/detailed" Component={Detailed_Question } />
+          <Route path="/result" element={<Results />} />
         </Routes>
         <APIsuff />
       </div>
     </Router>
-  
-  
   );
   }
 
