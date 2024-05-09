@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import { useNavigate } from "react-router-dom";
 
-function Basic_Question() {
+function BasicQuestion() {
   const questions = [
     'How do you prefer to work?',
     'What motivates you in your work?',
@@ -100,5 +100,5 @@ function Basic_Question() {
   );
 }
 
-export default Basic_Question;
+export default BasicQuestion;
 
