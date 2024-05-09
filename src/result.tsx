@@ -35,7 +35,7 @@ function Results(){
                 <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                     <h1 style={{textAlign: 'center', top: 0, fontWeight: 'bold', fontSize: '2em'}}>Results</h1>
                     <div>
-                      <h2 style={{textAlign: 'center', marginTop: '50px'}}>Your Responses:</h2>
+                      <h2 style={{textAlign: 'center', marginTop: '100px'}}>Your Responses:</h2>
                       {responses.map((response, index) => (
                         <p key={index}>{response.question}: {response.answer}</p>
                       ))}
