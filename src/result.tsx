@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import './App.css';
 import { GptResponse } from './ChatGPT';
 
@@ -28,45 +28,40 @@ function Results(){
     }
 
     
-
     return(
+        
         <div className='App'>
-            <header className="App-header">
-                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                    <h1 style={{textAlign: 'center', top: 0, fontWeight: 'bold', fontSize: '2em'}}>Results</h1>
-                    <div>
-                      <h2 style={{textAlign: 'center', marginTop: '100px'}}>Your Responses:</h2>
-                      {responses.map((response, index) => (
-                        <p key={index}>{response.question}: {response.answer}</p>
-                      ))}
-                      {
-                        !generatedResponse ? (
-                            <div>
-                                <h2>Loading.....</h2>
+            <header className='App-header2'>
+                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',color:"#000",marginBottom: '20px', fontSize: '40px', fontWeight: 'bold', height: '100%' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: "#000", marginBottom: '20px', fontSize: '40px', fontWeight: 'bold', height: '100%' }}>
+                            {!generatedResponse ? (
+                                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+                                     <h1 style={{ marginBottom: '20px', color: '#000', fontSize: '40px', fontWeight: 'bold' }}>Loading.....</h1>
                             </div>
-                        ) : (
-                            <div>
-                                <h2>AI Suggestion:</h2>
-                                {generatedResponse.split(".").map((sentence, index) => (
-                                <p key={index}>{sentence}.</p>
-                                ))}
-                            </div>
-                        )
-                      }
+                            ) : (
+                                <><div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '40px', backgroundColor: '#4B6D7A', height: 'auto', marginTop:'85px'}}>
+                                    <p style={{ marginBottom: '20px', color: '#000', fontSize: '40px', fontWeight: 'bold' }}>AI Suggestion:</p>
+                                        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+                                            {generatedResponse.split(".").map((sentence, index) => (
+                                                <div key={index} style={{ color: '#fff', fontSize: '20px', alignItems: 'center', width: '1000px', wordWrap: 'break-word' }}>{sentence}<p></p></div>
+                                            ))}
+                                            <div style={{ color: '#000', fontSize: '20px', alignItems: 'center', width: '1000px', wordWrap: 'break-word' }}>
+                                                <p>Send result</p>
+                                                <textarea style={{width: '300px',height: '50px', color: '#000', fontSize: '17px', justifyContent: 'center'}}
+                                                    rows={2}
+                                                    cols={20}
+                                                    onChange={updateEmail} />
+                                                <br />
+                                                <p>{email}</p>
+                                                <button type="button" onClick={() => send} className='Detailed-button'>Send Email</button>
+                                            </div>
+                                        </div>
+                                    </div></>
+                            )
+                            }
+                        </div>
                     </div>
-                    <Link to="/Home" className="container" style={{ textAlign:'center', padding: '10px 20px', backgroundColor: '#dc3545', color: '#fff', borderRadius: '5px', textDecoration: 'none', fontSize: '16px', fontWeight: 'bold', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', cursor: 'pointer'}}>
-                        Back to Home
-                    </Link>
-                </div>
-                <div>
-                    <textarea
-                    rows={2}
-                    cols={20}
-                    onChange={updateEmail}
-                    /><br />
-                    <p>{email}</p>
-                    <button type="button" onClick={() => send} className='Detailed-button'>Send Email</button>
-                </div>
+                
             </header>
         </div>
     );

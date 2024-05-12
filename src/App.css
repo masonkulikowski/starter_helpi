@@ -24,6 +24,20 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.App-header2 {
+  background-color: #a8c0c9;
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  height:950px;
+  height: auto;
+  display: flex;
+}
 
 .App-link {
   color: #61dafb;
@@ -120,3 +134,20 @@ h2{
     font-weight: bold; 
     text-decoration: none;
   }
+
+  .wrapper {
+  width:430px;
+  height:430px;
+  z-index:1;
+  background-color: #4B6D7A;
+  overflow: hidden; 
+}
+
+.content{
+  position: absolute;
+  background: #CCC;
+  padding: 1em;
+  box-sizing: border-box;
+  height: 0;
+  bottom: 0;
+}
