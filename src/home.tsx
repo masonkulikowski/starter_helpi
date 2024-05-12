@@ -14,7 +14,7 @@ return(
     <div className="w3-half">
     <h4 className="w3-xxxlarge w3-text-blue"><b>Basic Questions</b></h4>
       <h5 className='w3-left-align'>A basic career test helps individuals explore potential career paths by assessing their interests, personality traits, and skills. It provides an overview of suitable career options based on the assessment results.</h5>
-      <ul className='w3-left-align'>
+      <ul className='w3-left-align w3-sans-serif'>
         <li>Personality Assessment: It may assess personality traits to help identify suitable work environments and roles.</li>
         <li>Skills Assessment: Assesses skills to identify strengths and areas for development.</li>
         <li>Values Assessment: Identifies personal values related to work preferences.</li>
@@ -29,7 +29,7 @@ return(
       <div className="w3-half">
       <h4 className="w3-xxxlarge w3-text-blue"><b>Detailed Questions</b></h4>
       <h5 className='w3-left-align' >A detailed career test offers a comprehensive assessment of an individual's interests, personality, values, and skills. It provides in-depth insights into various career paths, including job descriptions, educational requirements, and career development resources.</h5>
-        <ul className='w3-left-align'>
+        <ul className='w3-left-align w3-sans-serif'>
           <li>Aptitude Testing: Includes aptitude testing to identify specific abilities and strengths relevant to different career paths.</li>
           <li>Work Environment Preferences: Tests preferences for work environments, such as team vs. independent work.</li>
           <li>Industry Matching: Provides specific recommendations for industries and job roles based on assessment results.</li>
