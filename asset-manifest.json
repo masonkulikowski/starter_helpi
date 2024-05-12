@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/starter_helpi/static/css/main.99d03459.css",
-    "main.js": "/starter_helpi/static/js/main.11ba1521.js",
+    "main.css": "/starter_helpi/static/css/main.36c93b66.css",
+    "main.js": "/starter_helpi/static/js/main.54b0bf85.js",
     "static/js/453.bad6c33a.chunk.js": "/starter_helpi/static/js/453.bad6c33a.chunk.js",
     "static/media/engineering.jpeg": "/starter_helpi/static/media/engineering.aa213f2a2c0e29bda619.jpeg",
     "static/media/corporate.jpeg": "/starter_helpi/static/media/corporate.a2428a60401ed91f1475.jpeg",
@@ -9,12 +9,12 @@
     "static/media/medical.jpeg": "/starter_helpi/static/media/medical.91151e13880b85d00d40.jpeg",
     "static/media/Arrow_Compass_White.webp": "/starter_helpi/static/media/Arrow_Compass_White.bc7bbd459a00b60153ab.webp",
     "index.html": "/starter_helpi/index.html",
-    "main.99d03459.css.map": "/starter_helpi/static/css/main.99d03459.css.map",
-    "main.11ba1521.js.map": "/starter_helpi/static/js/main.11ba1521.js.map",
+    "main.36c93b66.css.map": "/starter_helpi/static/css/main.36c93b66.css.map",
+    "main.54b0bf85.js.map": "/starter_helpi/static/js/main.54b0bf85.js.map",
     "453.bad6c33a.chunk.js.map": "/starter_helpi/static/js/453.bad6c33a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.99d03459.css",
-    "static/js/main.11ba1521.js"
+    "static/css/main.36c93b66.css",
+    "static/js/main.54b0bf85.js"
   ]
 }
