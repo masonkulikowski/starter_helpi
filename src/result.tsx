@@ -39,7 +39,7 @@ function Results(){
                                      <h1 style={{ marginBottom: '20px', color: '#000', fontSize: '40px', fontWeight: 'bold' }}>Loading.....</h1>
                             </div>
                             ) : (
-                                <><div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '40px', backgroundColor: '#4B6D7A', height: 'auto'}}>
+                                <><div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '40px', backgroundColor: '#4B6D7A', height: 'auto', marginTop:'85px'}}>
                                     <p style={{ marginBottom: '20px', color: '#000', fontSize: '40px', fontWeight: 'bold' }}>AI Suggestion:</p>
                                         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
                                             {generatedResponse.split(".").map((sentence, index) => (
@@ -47,7 +47,7 @@ function Results(){
                                             ))}
                                             <div style={{ color: '#000', fontSize: '20px', alignItems: 'center', width: '1000px', wordWrap: 'break-word' }}>
                                                 <p>Send result</p>
-                                                <textarea
+                                                <textarea style={{width: '300px',height: '50px', color: '#000', fontSize: '17px', justifyContent: 'center'}}
                                                     rows={2}
                                                     cols={20}
                                                     onChange={updateEmail} />
