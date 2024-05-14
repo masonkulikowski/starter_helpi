@@ -71,7 +71,7 @@ function DetailedQuestion() {
         <div className='App'>
             <header className='App-header'>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '40px', backgroundColor: '#4B6D7A' }}>
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', color:"#000",marginBottom: '20px', fontSize: '40px', fontWeight: 'bold'}}>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', color:"#000",marginBottom: '20px', fontWeight: 'bold'}}>
                     <h1><b>Detailed Questions</b></h1> </div>
                     <form onSubmit={submitAssessment}>
                         <div>

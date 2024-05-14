@@ -50,9 +50,9 @@ function BasicQuestion() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '40px', backgroundColor: '#4B6D7A' }}>
-          <h1 style={{ marginBottom: '20px', color: '#000', fontSize: '40px', fontWeight: 'bold' }}>Basic Questions</h1>
-          <div style={{ marginBottom: '20px', width: '80%', textAlign: 'center' }}>
+          <h1 style={{ marginBottom: '100px', color: '#000', fontSize: '40px', fontWeight: 'bold' }}>Basic Questions</h1>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '40px', backgroundColor: '#4B6D7A' }}>
+          <div style={{ marginBottom: '-50px', width: '80%', textAlign: 'center' }}>
             {showResults ? (
               <h3 style={{ color: '#fff', fontSize: '30px' }}>You have completed all questions!</h3>
             ) : (
@@ -68,9 +68,10 @@ function BasicQuestion() {
               </ol>
             )}
           </div>
-          <div className='progress'>
-            <p style={{ color: '#fff', fontSize: '18px', fontWeight: 'bold' }}>Progress</p>
+          <div className='progress' >
+            <p style={{ color: '#fff', fontSize: '18px', fontWeight: 'bold', marginTop:"40px"}}>Progress</p>
             <div style={{
+              
               backgroundColor: '#18c002',
               height: '10px',
               width: `${progress * 150}px`,
