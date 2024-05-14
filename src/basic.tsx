@@ -50,7 +50,7 @@ function BasicQuestion() {
   return (
     <div className='App'>
       <header className='App-header'>
-          <h1 style={{ marginBottom: '100px', color: '#000', fontSize: '40px', fontWeight: 'bold' }}>Basic Questions</h1>
+          <p style={{ marginBottom: '20px', color: '#000', fontSize: '40px', fontWeight: 'bold' }}>Basic Questions</p>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '40px', backgroundColor: '#4B6D7A' }}>
           <div style={{ marginBottom: '-50px', width: '80%', textAlign: 'center' }}>
             {showResults ? (
@@ -102,4 +102,3 @@ function BasicQuestion() {
 }
 
 export default BasicQuestion;
-
