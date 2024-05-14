@@ -8,7 +8,7 @@ export async function GptResponse(answer: { question: string, answer: string }[]
     try{
     const formattedAnswers = answer.map(ans => `${ans.question}: ${ans.answer}`).join(", ");
 
-    const prompt = `Based on these answers: ${formattedAnswers}. Suggest 3 career best suited for the user. Keep your answer short and simple. and lable them from 1) to 3) and give a short and simple explainion.`;
+    const prompt = `Based on these answers: ${formattedAnswers}. Suggest 3 career best suited for the user. Keep your answer simple and keep it in a ong long sentence. and lable them from 1) to 3) and give a short and simple explainion.`;
 
 
     const completion = await openai.chat.completions.create({
