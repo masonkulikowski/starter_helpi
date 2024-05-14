@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import './App.css';
 import { GptResponse } from './ChatGPT';
+import axios from 'axios';
 
 
 function Results(){
@@ -24,7 +25,16 @@ function Results(){
     function updateEmail(event: React.ChangeEvent<HTMLTextAreaElement>) {
         setEmail(event.target.value);
     };
-    function send() {
+    async function send() {
+        try {
+            await axios.post('http://localhost:3000/send-email', {
+                email: email,
+                generatedResponse: generatedResponse
+            });
+            console.log('Email sent');
+        } catch (error) {
+            console.error("Failed to send email", error);
+        }
     }
 
     
@@ -53,7 +63,7 @@ function Results(){
                                                     onChange={updateEmail} />
                                                 <br />
                                                 <p>{email}</p>
-                                                <button type="button" onClick={() => send} className='Detailed-button'>Send Email</button>
+                                                <button type="button" onClick={send} className='Detailed-button'>Send Email</button>
                                             </div>
                                         </div>
                                     </div></>
