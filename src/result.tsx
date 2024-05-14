@@ -18,15 +18,6 @@ function Results(){
 
         getResponse();
     }, [responses]);
-
-    const[email, setEmail] = useState<string>("");
-
-    function updateEmail(event: React.ChangeEvent<HTMLTextAreaElement>) {
-        setEmail(event.target.value);
-    };
-    function send() {
-    }
-
     
     return(
         
@@ -45,16 +36,6 @@ function Results(){
                                             {generatedResponse.split(".").map((sentence, index) => (
                                                 <div key={index} style={{ color: '#fff', fontSize: '20px', alignItems: 'center', width: '1000px', wordWrap: 'break-word' }}>{sentence}<p></p></div>
                                             ))}
-                                            <div style={{ color: '#000', fontSize: '20px', alignItems: 'center', width: '1000px', wordWrap: 'break-word' }}>
-                                                <p>Send result</p>
-                                                <textarea style={{width: '300px',height: '50px', color: '#000', fontSize: '17px', justifyContent: 'center'}}
-                                                    rows={2}
-                                                    cols={20}
-                                                    onChange={updateEmail} />
-                                                <br />
-                                                <p>{email}</p>
-                                                <button type="button" onClick={() => send} className='Detailed-button'>Send Email</button>
-                                            </div>
                                         </div>
                                     </div></>
                             )
