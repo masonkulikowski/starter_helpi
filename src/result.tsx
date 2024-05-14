@@ -31,7 +31,7 @@ function Results(){
                             </div>
                             ) : (
                                 <><div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '40px', backgroundColor: '#4B6D7A', height: 'auto', marginTop:'85px'}}>
-                                    <p style={{ marginBottom: '20px', color: '#000', fontSize: '40px', fontWeight: 'bold' }}>AI Suggestion:</p>
+                                    <p style={{ marginBottom: '20px', color: '#000', fontSize: '40px', fontWeight: 'bold' }}>We Reccomend:</p>
                                         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
                                             {generatedResponse.split(".").map((sentence, index) => (
                                                 <div key={index} style={{ color: '#fff', fontSize: '20px', alignItems: 'center', width: '1000px', wordWrap: 'break-word' }}>{sentence}<p></p></div>
