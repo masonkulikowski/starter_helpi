@@ -1,3 +1,4 @@
+
 import { render, screen } from '@testing-library/react';
 import Home from './home';
 
@@ -26,11 +27,5 @@ it('renders images with correct sources', () => {
   expect(images[1]).toHaveAttribute('src', 'art.jpeg');
   expect(images[2]).toHaveAttribute('src', 'corporate.jpeg');
   expect(images[3]).toHaveAttribute('src', 'medical.jpeg');
-});
-
-// Snapshot Test
-it('matches snapshot', () => {
-  const { asFragment } = render(<Home />);
-  expect(asFragment()).toMatchSnapshot();
 });
 

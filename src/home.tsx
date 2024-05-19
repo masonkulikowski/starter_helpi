@@ -23,6 +23,7 @@ return(
           <li>Feedback and Guidance: Provides feedback and guidance based on assessment results.</li>
           <li>Report or Summary: Provides a report summarizing strengths, preferences, and suggested career paths.</li>
           <br></br>
+          <br></br>
         </ul>
       <h6><b>The Basic Assessment (2 minutes) is recommended for use when time is limited.</b></h6>
       </div>
